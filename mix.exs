@@ -20,7 +20,14 @@ defmodule Critistry.Mixfile do
   def application do
     [
       mod: {Critistry.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: 
+      [
+        :logger, 
+        :runtime_tools,
+        :ueberauth, 
+        :ueberauth_google, 
+        :ueberauth_facebook
+      ]
     ]
   end
 
@@ -43,6 +50,12 @@ defmodule Critistry.Mixfile do
       {:cowboy, "~> 1.0"},
       {:edeliver, ">= 1.6.0"},
       {:distillery, "~> 2.0", warn_missing: false},
+      {:guardian, "~> 1.0"},
+      {:ueberauth, "~> 0.4"},
+      {:ueberauth_facebook, "~> 0.7"},
+      {:ueberauth_google, "~> 0.7"},
+      {:ex_machina, "~> 2.2"},      
+      {:elixilorem, "~> 0.0.1"}
     ]
   end
 

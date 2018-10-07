@@ -1,36 +1,314 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
+<!-- Scroll to top button -->
+		<div class="scrolltotop">
+			<a class="button-circle button-circle-sm button-circle-dark" href="#"><i class="ti-arrow-up"></i></a>
+		</div>
+		<!-- end Scroll to top button -->
 
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
-  </div>
+		<!-- Home section -->
+		<div class="owl-carousel owl-nav-overlay owl-dots-overlay" data-owl-nav="true" data-owl-dots="true" data-owl-items="1">
+			<!-- Slider box 1 -->
+			<div class="bg-image" style="background-image: url(../images/background.jpg)">
+				<div class="section-xl bg-black-04">
+					<div class="container text-center">
+						<div class="row">
+							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+								<p class="lead margin-bottom-20">Please Welcome</p>
+								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
+								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#exampleModal" href="#">Join Now</a>
+							</div>
+						</div><!-- end row -->
+					</div><!-- end container -->
+				</div>
+			</div>
+			<!-- Slider box 2 -->
+			<div class="bg-image" style="background-image: url(../images/background2.jpg)">
+				<div class="section-xl bg-black-04">
+					<div class="container text-center">
+						<div class="row">
+							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+								<p class="lead margin-bottom-20">Please Welcome</p>
+								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
+								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#exampleModal" href="#">Join Now</a>
+							</div>
+						</div><!-- end row -->
+					</div><!-- end container -->
+				</div>
+			</div>
+      <!-- Slider box 3 -->
+			<div class="bg-image" style="background-image: url(../images/background3.jpg)">
+				<div class="section-xl bg-black-04">
+					<div class="container text-center">
+						<div class="row">
+							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+								<p class="lead margin-bottom-20">Please Welcome</p>
+								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
+								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#exampleModal" href="#">Join Now</a>
+							</div>
+						</div><!-- end row -->
+					</div><!-- end container -->
+				</div>
+			</div>
+      <!-- Slider box 4 -->
+			<div class="bg-image" style="background-image: url(../images/background4.jpg)">
+				<div class="section-xl bg-black-04">
+					<div class="container text-center">
+						<div class="row">
+							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+								<p class="lead margin-bottom-20">Please Welcome</p>
+								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
+								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#exampleModal" href="#">Join Now</a>
+							</div>
+						</div><!-- end row -->
+					</div><!-- end container -->
+				</div>
+			</div>
+		</div><!-- end owl-carousel -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<a href="/auth/facebook" class="btn btn-lg btn-block btn-social btn-facebook">
+							<i class="fab fa-facebook"></i> Sign in with Facebook
+						</a>
+						<a href="/auth/google" class="btn btn-lg btn-block btn-social btn-google">
+							<i class="fab fa-google"></i> Sign in with Google
+						</a>										
+					</div>
+					<div class="modal-footer">
+						
+					</div>
+				</div><!-- end modal-content -->
+			</div><!-- end modal-dialog -->
+		</div><!-- end modal -->
+		
+		<!-- Process section -->
+		<div class="section bg-grey-lighter">
+			<div class="container">
+				<div class="row">
+					<!-- 1 -->
+					<div class="col-12 col-lg-4">
+						<div class="clearfix">
+							<h1 class="font-weight-light float-left margin-right-20">01</h1>
+							<span class="d-block font-small font-weight-normal text-dark">Description</span>
+							<h5 class="font-weight-normal line-height-120">Designing</h5>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+					</div>
+					<!-- 2 -->
+					<div class="col-12 col-lg-4">
+						<div class="clearfix">
+							<h1 class="font-weight-light float-left margin-right-20">02</h1>
+							<span class="d-block font-small font-weight-normal text-dark">Description</span>
+							<h5 class="font-weight-normal line-height-120">Developing</h5>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+					</div>
+					<!-- 3 -->
+					<div class="col-12 col-lg-4">
+						<div class="clearfix">
+							<h1 class="font-weight-light float-left margin-right-20">03</h1>
+							<span class="d-block font-small font-weight-normal text-dark">Description</span>
+							<h5 class="font-weight-normal line-height-120">Launching</h5>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+					</div>
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</div>
+		<!-- end Process section -->
 
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
-  </div>
-</div>
+		<!-- About section -->
+		<div class="section">
+			<div class="container">
+				<div class="row align-items-center col-spacing-50">
+					<div class="col-12 col-lg-6">
+						<img src="../images/col-1.jpg" alt="">
+					</div>
+					<div class="col-12 col-lg-6">
+						<h3 class="font-weight-light margin-bottom-20">We believe that teamwork divides the tasks and multiplies the success</h3>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="#"><i class="ti-arrow-right"></i><span>Learn More</span></a>
+					</div>
+				</div>
+			</div><!-- end container -->
+		</div>
+		<!-- end About section -->
+
+		<!-- Facts section -->
+		<div class="section bg-image parallax" style="background-image: url('../images/background.jpg')">
+			<div class="bg-black-05">
+				<div class="container text-center">
+					<div class="row facts-wrapper">
+						<!-- Facts box 1 -->
+						<div class="col-12 col-md-3">
+							<h1 class="display-4 font-weight-thin facts-counter">100</h1>
+							<span class="heading-uppercase text-white">Fact One</span>
+						</div>
+						<!-- Facts box 2 -->
+						<div class="col-12 col-md-3">
+							<h1 class="display-4 font-weight-thin facts-counter">100</h1>
+							<span class="heading-uppercase text-white">Fact Two</span>
+						</div>
+						<!-- Facts box 3 -->
+						<div class="col-12 col-md-3">
+							<h1 class="display-4 font-weight-thin facts-counter">100</h1>
+							<span class="heading-uppercase text-white">Fact Three</span>
+						</div>
+						<!-- Facts box 4 -->
+						<div class="col-12 col-md-3">
+							<h1 class="display-4 font-weight-thin facts-counter">100</h1>
+							<span class="heading-uppercase text-white">Fact Four</span>
+						</div>
+					</div><!-- end row -->
+				</div><!-- end container -->
+			</div>
+		</div>
+		<!-- end Facts section -->
+
+		<!-- Services section -->
+		<div class="section">
+			<div class="container">
+				<div class="section-title text-center">
+					<h6 class="heading-uppercase">Services</h6>
+					<h2>What We Do</h2>
+				</div>
+				<div class="row text-center">
+					<!-- Icon text box 1 -->
+					<div class="col-12 col-md-4 icon-5xl">
+						<i class="ti-star text-dark"></i>
+						<h6 class="heading-uppercase margin-top-20">Social Marketing</h6>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+					</div>
+					<!-- Icon text box 2 -->
+					<div class="col-12 col-md-4 icon-5xl">
+						<i class="ti-ruler-pencil text-dark"></i>
+						<h6 class="heading-uppercase margin-top-20">Graphic Design</h6>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+					</div>
+					<!-- Icon text box 3 -->
+					<div class="col-12 col-md-4 icon-5xl">
+						<i class="ti-camera text-dark"></i>
+						<h6 class="heading-uppercase margin-top-20">Photography</h6>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+					</div>
+				</div><!-- end row -->
+				<div class="text-center margin-top-70">
+					<a class="button button-lg button-reveal-right-dark button-rounded" href="#"><i class="ti-email"></i><span>Contact Us</span></a>
+				</div>
+			</div><!-- end container -->
+		</div>
+		<!-- end Services section -->
+
+		<!-- Clients section -->
+		<div class="section bg-grey">
+			<div class="container">
+				<div class="owl-carousel" data-owl-dots="false" data-owl-margin="30" data-owl-autoplay="true" data-owl-xs="1" data-owl-sm="2" data-owl-md="3" data-owl-lg="4" data-owl-xl="6">
+					<!-- Client box 1 -->
+					<div class="client-box">
+						<a href="#">
+							<img src="../images/col-5.jpg" alt="">
+						</a>
+					</div>
+					<!-- Client box 2 -->
+					<div class="client-box">
+						<a href="#">
+							<img src="../images/col-5.jpg" alt="">
+						</a>
+					</div>
+					<!-- Client box 3 -->
+					<div class="client-box">
+						<a href="#">
+							<img src="../images/col-5.jpg" alt="">
+						</a>
+					</div>
+					<!-- Client box 4 -->
+					<div class="client-box">
+						<a href="#">
+							<img src="../images/col-5.jpg" alt="">
+						</a>
+					</div>
+					<!-- Client box 5 -->
+					<div class="client-box">
+						<a href="#">
+							<img src="../images/col-5.jpg" alt="">
+						</a>
+					</div>
+					<!-- Client box 6 -->
+					<div class="client-box">
+						<a href="#">
+							<img src="../images/col-5.jpg" alt="">
+						</a>
+					</div>
+					<!-- Client box 7 -->
+					<div class="client-box">
+						<a href="#">
+							<img src="../images/col-5.jpg" alt="">
+						</a>
+					</div>
+				</div><!-- end owl-carousel -->
+			</div><!-- end container -->
+		</div>
+		<!-- end Clients section -->
+
+		<!-- Testimonial section -->
+		<div class="section">
+			<div class="container">
+				<div class="section-title text-center">
+					<h6 class="heading-uppercase">Testimonial</h6>
+					<h2>What People Say</h2>
+				</div>
+				<div class="testimonial-grid column-2">
+					<!-- 1 -->
+					<div class="testimonial-grid-box">
+						<div class="testimonial-img">
+							<img src="../images/img-circle-small.jpg" alt="">
+						</div>
+						<div class="testimonial-content">
+							<p class="margin-bottom-10 font-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+							<h5 class="font-weight-normal no-margin">Emiley Haley</h5>
+							<span class="font-small font-weight-normal">Manager - Mono</span>
+						</div>
+					</div>
+					<!-- 2 -->
+					<div class="testimonial-grid-box">
+						<div class="testimonial-img">
+							<img src="../images/img-circle-small.jpg" alt="">
+						</div>
+						<div class="testimonial-content">
+							<p class="margin-bottom-10 font-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+							<h5 class="font-weight-normal no-margin">Andrew Palmer</h5>
+							<span class="font-small font-weight-normal">Developer - Mono</span>
+						</div>
+					</div>
+					<!-- 3 -->
+					<div class="testimonial-grid-box">
+						<div class="testimonial-img">
+							<img src="../images/img-circle-small.jpg" alt="">
+						</div>
+						<div class="testimonial-content">
+							<p class="margin-bottom-10 font-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+							<h5 class="font-weight-normal no-margin">Anna Mullen</h5>
+							<span class="font-small font-weight-normal">Designer - Mono</span>
+						</div>
+					</div>
+					<!-- 4 -->
+					<div class="testimonial-grid-box">
+						<div class="testimonial-img">
+							<img src="../images/img-circle-small.jpg" alt="">
+						</div>
+						<div class="testimonial-content">
+							<p class="margin-bottom-10 font-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+							<h5 class="font-weight-normal no-margin">John Smith</h5>
+							<span class="font-small font-weight-normal">Marketer - Mono</span>
+						</div>
+					</div>
+				</div><!-- end testimonial-grid -->
+			</div><!-- end row -->
+		</div>
+		<!-- end Testimonial section -->
