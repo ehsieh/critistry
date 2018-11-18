@@ -48,3 +48,12 @@ config :ueberauth, Ueberauth.Strategy.Twitter.OAuth,
 config :critistry, Critistry.Auth.Guardian,
   issuer: "critistry",
   secret_key: "vzyII6cc0fX/7II4v3t+G4XHQ4lFq30hIYELyoHN/jUQRXK21cOpZKdygJnSNlwj"
+
+config :ex_aws, 
+access_key_id: System.get_env("AWS_ACCESS_KEY_ID"),          
+secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
+s3: [ 
+ scheme: "https://", 
+ host: "critistry-uploads.s3.amazonaws.com", 
+ region: "us-west-1" 
+]

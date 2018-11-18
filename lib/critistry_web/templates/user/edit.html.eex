@@ -1,0 +1,30 @@
+<div class="section-fullscreen bg-image" style="background-image: url(/assets/images/background1.jpg)">
+  <div class="bg-black-07">
+    <div class="container text-center">
+      <div class="position-middle">
+        <div class="row">
+          <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+            <h4 class="font-weight-light margin-bottom-30">My Profile</h4>
+            <%= form_for @changeset, user_path(@conn, :update, @user.id), fn f -> %>
+              <%= if @changeset.action do %>
+                <div class="alert alert-danger">
+                  <p>Oops, something went wrong! Please check the errors below.</p>
+                </div>
+              <% end %>
+              <%= label f, :first_name %>
+              <%= text_input f, :first_name %>
+              <%= error_tag f, :first_name %>              
+
+              <%= label f, :last_name %>
+              <%= text_input f, :last_name %>
+              <%= error_tag f, :last_name %>      
+
+              <%= submit "Submit", class: "button button-lg button-outline-white-2 button-fullwidth" %>
+            <% end %>                 
+          </div>
+        </div><!-- end row -->
+      </div><!-- end position-middle -->					
+    </div><!-- end container -->
+  </div>
+</div>
+

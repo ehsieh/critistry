@@ -10,8 +10,7 @@ defmodule Critistry.Repo.Migrations.CreateCritGroups do
       add :approval_to_join, :boolean, default: false, null: false
       add :max_members, :integer
       add :session_duration_days, :integer
-      add :admin_user_id, :integer
-      add :create_date, :naive_datetime
+      add :admin_user_id, :integer      
     
       timestamps()
     end

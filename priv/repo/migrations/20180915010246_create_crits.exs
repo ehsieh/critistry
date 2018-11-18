@@ -5,7 +5,7 @@ defmodule Critistry.Repo.Migrations.CreateCrits do
     create table(:crits) do
       add :annotations_json, :string
       add :is_active, :boolean, default: false, null: false
-      add :post_date, :naive_datetime
+      add :post_date, :timestamptz
       add :user_id, references(:users, on_delete: :nothing)
       add :crit_session_id, references(:crit_sessions, on_delete: :nothing)
 

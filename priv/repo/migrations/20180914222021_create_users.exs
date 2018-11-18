@@ -7,7 +7,7 @@ defmodule Critistry.Repo.Migrations.CreateUsers do
       add :first_name, :string
       add :last_name, :string
       add :email, :string
-      add :avatar, :string
+      add :image, :string
       add :bio, :string
       add :last_login, :timestamptz
 

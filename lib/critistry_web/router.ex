@@ -9,8 +9,19 @@ defmodule CritistryWeb.Router do
     plug :put_secure_browser_headers
   end
 
-  pipeline :auth do
-    plug Critistry.Auth.Pipeline
+  pipeline :auth do    
+    plug Guardian.Plug.Pipeline, module: Critistry.Auth.Guardian,
+      error_handler: Critistry.Auth.ErrorHandler   
+    plug Guardian.Plug.VerifySession
+    plug Guardian.Plug.EnsureAuthenticated    
+    plug Guardian.Plug.LoadResource
+  end
+
+  pipeline :home_auth do   
+    plug Guardian.Plug.Pipeline, module: Critistry.Auth.Guardian,
+      error_handler: Critistry.Auth.ErrorHandler
+    plug Guardian.Plug.VerifySession    
+    plug Guardian.Plug.LoadResource, allow_blank: true
   end
 
   pipeline :api do
@@ -18,9 +29,10 @@ defmodule CritistryWeb.Router do
   end
 
   scope "/", CritistryWeb do
-    pipe_through :browser # Use the default browser stack
+    pipe_through [:browser, :home_auth]
 
     get "/", PageController, :index
+    get "/sign-out", PageController, :sign_out
     get "/about", PageController, :about
     get "/contact", PageController, :contact
     get "/faq", PageController, :faq
@@ -30,8 +42,10 @@ defmodule CritistryWeb.Router do
     pipe_through [:browser, :auth]
 
     get "/", DashboardController, :index   
-    get "/my-crit-requests", DashboardController, :my_crit_requests   
-    get "/my-crit-sessions", DashboardController, :my_crit_sessions      
+    get "/my-profile", DashboardController, :my_profile
+    put "/my-profile", DashboardController, :update_my_profile
+    get "/my-crit-requests", DashboardController, :my_crit_requests
+    get "/my-crit-sessions", DashboardController, :my_crit_sessions
 
     get "/crit-groups", CritGroupController, :list
     get "/crit-groups/:id", CritGroupController, :show
@@ -43,7 +57,7 @@ defmodule CritistryWeb.Router do
     get "/crits/:id", CritController, :show
     get "/crit-sessions/:id/crits/new", CritController, :new
 
-    get "/user/:id", UserController, :show    
+    get "/users/:id", UserController, :show    
   end
 
   scope "/auth", CritistryWeb do

@@ -1,5 +1,5 @@
 defmodule CritistryWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :critistry
+  use Phoenix.Endpoint, otp_app: :critistry  
 
   socket "/socket", CritistryWeb.UserSocket
 

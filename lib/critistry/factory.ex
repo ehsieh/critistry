@@ -10,6 +10,24 @@ defmodule Critistry.Factory do
   end
 
   def crit_group_factory do
-    
+    %Critistry.Crits.CritGroup{      
+      admin_user_id: 1,
+      approval_to_join: sequence(:approval_to_join, [true, false]),
+      avatar: "",
+      description: Elixilorem.sentence,
+      is_private: sequence(:is_private, [true, false]),
+      max_members: sequence(:max_members, [4, 6, 8, 10]),
+      name: Elixilorem.words(4),
+      session_duration_days: sequence(:session_duration_days, [5, 7, 10, 14])
+    }
+  end
+
+  def crit_session_factory do
+    %Critistry.Crits.CritSession{
+      description: Elixilorem.sentence,      
+      image: "",
+      is_active: sequence(:is_active, [true, false]),
+      name: Elixilorem.words(4)    
+    }
   end
 end

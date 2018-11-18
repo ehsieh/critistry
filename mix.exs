@@ -55,7 +55,11 @@ defmodule Critistry.Mixfile do
       {:ueberauth_facebook, "~> 0.7"},
       {:ueberauth_google, "~> 0.7"},
       {:ex_machina, "~> 2.2"},      
-      {:elixilorem, "~> 0.0.1"}
+      {:elixilorem, "~> 0.0.1"},
+      {:ex_aws, "~> 1.0"},
+      {:poison, "~> 2.0"},     
+      {:hackney, "~> 1.6"},     
+      {:uuid, "~> 1.1" }
     ]
   end
 

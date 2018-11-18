@@ -7,14 +7,14 @@
 		<!-- Home section -->
 		<div class="owl-carousel owl-nav-overlay owl-dots-overlay" data-owl-nav="true" data-owl-dots="true" data-owl-items="1">
 			<!-- Slider box 1 -->
-			<div class="bg-image" style="background-image: url(../images/background.jpg)">
+			<div class="bg-image" style="background-image: url(../images/background1.jpg)">
 				<div class="section-xl bg-black-04">
 					<div class="container text-center">
 						<div class="row">
 							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 								<p class="lead margin-bottom-20">Please Welcome</p>
 								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
-								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#exampleModal" href="#">Join Now</a>
+								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#loginModal" href="#">Join Now</a>
 							</div>
 						</div><!-- end row -->
 					</div><!-- end container -->
@@ -28,7 +28,7 @@
 							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 								<p class="lead margin-bottom-20">Please Welcome</p>
 								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
-								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#exampleModal" href="#">Join Now</a>
+								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#loginModal" href="#">Join Now</a>
 							</div>
 						</div><!-- end row -->
 					</div><!-- end container -->
@@ -42,7 +42,7 @@
 							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 								<p class="lead margin-bottom-20">Please Welcome</p>
 								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
-								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#exampleModal" href="#">Join Now</a>
+								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#loginModal" href="#">Join Now</a>
 							</div>
 						</div><!-- end row -->
 					</div><!-- end container -->
@@ -56,14 +56,14 @@
 							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 								<p class="lead margin-bottom-20">Please Welcome</p>
 								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
-								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#exampleModal" href="#">Join Now</a>
+								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#loginModal" href="#">Join Now</a>
 							</div>
 						</div><!-- end row -->
 					</div><!-- end container -->
 				</div>
 			</div>
 		</div><!-- end owl-carousel -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -94,29 +94,29 @@
 					<!-- 1 -->
 					<div class="col-12 col-lg-4">
 						<div class="clearfix">
-							<h1 class="font-weight-light float-left margin-right-20">01</h1>
-							<span class="d-block font-small font-weight-normal text-dark">Description</span>
-							<h5 class="font-weight-normal line-height-120">Designing</h5>
+							<h1 class="font-weight-light float-left margin-right-20">1</h1>
+							<span class="d-block font-small font-weight-normal text-dark">Crit Group</span>
+							<h5 class="font-weight-normal line-height-120">Create or Join</h5>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+						<p>Create or join a Crit Group to connect with fellow artists.  Crit groups are categorized by subject/medium. </p>
 					</div>
 					<!-- 2 -->
 					<div class="col-12 col-lg-4">
 						<div class="clearfix">
-							<h1 class="font-weight-light float-left margin-right-20">02</h1>
-							<span class="d-block font-small font-weight-normal text-dark">Description</span>
-							<h5 class="font-weight-normal line-height-120">Developing</h5>
+							<h1 class="font-weight-light float-left margin-right-20">2</h1>
+							<span class="d-block font-small font-weight-normal text-dark">Crit Session</span>
+							<h5 class="font-weight-normal line-height-120">Post your Artwork</h5>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+						<p>Post your artwork as a Crit Session to the group to request for feedback.  Only members of your Crit Group can provide feedback on your work.</p>
 					</div>
 					<!-- 3 -->
 					<div class="col-12 col-lg-4">
 						<div class="clearfix">
-							<h1 class="font-weight-light float-left margin-right-20">03</h1>
-							<span class="d-block font-small font-weight-normal text-dark">Description</span>
-							<h5 class="font-weight-normal line-height-120">Launching</h5>
+							<h1 class="font-weight-light float-left margin-right-20">3</h1>
+							<span class="d-block font-small font-weight-normal text-dark">Crit</span>
+							<h5 class="font-weight-normal line-height-120">Give/Receive Feedack</h5>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+						<p>Give and receive feedback as Crits.  Our intuitive Crit editor makes it easy to enter feedback and comments.</p>
 					</div>
 				</div><!-- end row -->
 			</div><!-- end container -->

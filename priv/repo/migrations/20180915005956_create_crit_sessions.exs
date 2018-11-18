@@ -7,8 +7,8 @@ defmodule Critistry.Repo.Migrations.CreateCritSessions do
       add :description, :string
       add :image, :string
       add :is_active, :boolean, default: false, null: false
-      add :start_date, :naive_datetime
-      add :end_date, :naive_datetime
+      add :start_date, :timestamptz
+      add :end_date, :timestamptz
       add :crit_group_id, references(:crit_groups, on_delete: :nothing)
       add :user_id, references(:users, on_delete: :nothing)
       

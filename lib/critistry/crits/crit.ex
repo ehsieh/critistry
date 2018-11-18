@@ -6,7 +6,7 @@ defmodule Critistry.Crits.Crit do
   schema "crits" do
     field :annotations_json, :string
     field :is_active, :boolean, default: false
-    field :post_date, :naive_datetime
+    field :post_date, :utc_datetime
     belongs_to :user, Critistry.Auth.User
     belongs_to :crit_session, Critistry.Crits.CritSession
 
