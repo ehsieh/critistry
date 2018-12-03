@@ -17,3 +17,5 @@ config :critistry, Critistry.Repo,
   database: "critistry_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+  import_config "api.secret.exs"
