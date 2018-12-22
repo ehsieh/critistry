@@ -1,1 +1,75 @@
-New Crit Group
+<!-- Page header -->
+			<div class="bg-image parallax" style="background-image: url(/images/background1.jpg)">
+				<div class="page-title-sm bg-black-07 text-center">
+					<div class="container">
+						<nav aria-label="breadcrumb">
+							<ul class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#">Home</a></li>
+								<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Profile</li>
+							</ul>
+						</nav>
+					</div><!-- end container -->
+				</div><!-- end page-title -->
+			</div><!-- end bg-image -->
+			<!-- end Page header -->
+		</header>
+
+		<!-- About section -->
+		<div class="section">
+			<div class="container">
+				<div class="row align-items-center col-spacing-50">
+					<div class="col-12 col-lg-4">
+						<img class="border-all" src="<%= @user.image %>" alt=""><!-- Image source -->
+					</div>
+					<div class="col-12 col-lg-8">
+            <h5>New Crit Group</h5>
+            <%= form_for @changeset, crit_group_path(@conn, :create), [multipart: true], fn f -> %>
+              <%= if @changeset.action do %>
+                <div class="alert alert-danger">
+                  <p>Oops, something went wrong! Please check the errors below.</p>
+                </div>
+              <% end %>                  
+
+              <%= label f, :name, class: "required" %>
+              <%= error_tag f, :name %>      
+              <%= text_input f, :name %>
+                      
+              <%= label f, :description, class: "required" %>
+              <%= error_tag f, :description %>   
+              <%= textarea f, :description %>           
+
+              <div class="form-check">
+                <%= checkbox f, :approval_to_join, class: "form-check-input" %>
+                <%= label f, :approval_to_join, class: "form-check-label" %>
+                <%= error_tag f, :approval_to_join %>                   
+              </div>
+
+              <div class="form-check">
+                <%= checkbox f, :is_private, class: "form-check-input" %>
+                <%= label f, :is_private, class: "form-check-label" %>
+                <%= error_tag f, :is_private %>                   
+              </div>
+              <br/>              
+              <%= label f, :max_members %>
+              <%= error_tag f, :max_members %>   
+              <%= select f, :max_members, 5..10, class: "custom-select w-100" %>
+              
+              <%= label f, :session_duration_days %>
+              <%= error_tag f, :session_duration_days %>   
+              <%= select f, :session_duration_days, 7..14, class: "custom-select w-100" %>
+              
+              <%= label f, :image %>
+              <%= error_tag f, :image %>
+              <%= file_input f, :image %>         
+              <%= submit "Submit", class: "button button-lg button-grey button-fullwidth" %>
+            <% end %>      									
+						
+					</div>
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</div>
+		<!-- end About section -->
+
+	
+

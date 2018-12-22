@@ -13,6 +13,7 @@ defmodule Critistry.Repo.Migrations.CreateUsers do
 
       timestamps(type: :timestamptz)
     end
-
+    
+    create unique_index(:users, [:user_name])
   end
 end

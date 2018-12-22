@@ -1,1 +1,4 @@
-Dashboard
+<a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="<%= crit_group_path(@conn, :new) %>">
+  <i class="ti-arrow-right"></i>
+  <span>New Crit Group</span>
+</a>

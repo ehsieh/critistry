@@ -16,7 +16,9 @@ defmodule Critistry.Auth do
   end  
 
   def find_user_by_email(email) do
-    Repo.get_by(User, email: email)
+    user = Repo.get_by(User, email: email)
+    user 
+    |> Repo.preload(:crit_groups)
   end
 
   def create_user(attrs \\ %{}) do

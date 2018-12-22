@@ -19,7 +19,8 @@ defmodule Critistry.Auth.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:first_name, :last_name, :user_name, :email, :image])
-    |> validate_required([:email])
+    |> cast(attrs, [:first_name, :last_name, :user_name, :email, :bio, :image])
+    |> validate_required([:email, :first_name, :last_name])
+    |> unique_constraint(:user_name)
   end
 end

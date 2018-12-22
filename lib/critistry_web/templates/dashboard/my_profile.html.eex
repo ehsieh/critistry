@@ -5,8 +5,8 @@
 						<nav aria-label="breadcrumb">
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
-								<li class="breadcrumb-item"><a href="#">Pages</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Account</li>
+								<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Profile</li>
 							</ul>
 						</nav>
 					</div><!-- end container -->
@@ -29,26 +29,26 @@
                 <div class="alert alert-danger">
                   <p>Oops, something went wrong! Please check the errors below.</p>
                 </div>
-              <% end %>
-              <%= label f, :image %>
-              <%= file_input f, :image %>
-              <%= error_tag f, :image %>
-              <%= label f, :first_name %>
+              <% end %>                   
+              <%= label f, :first_name, class: "required" %>
+              <%= error_tag f, :first_name %>      
               <%= text_input f, :first_name %>
-              <%= error_tag f, :first_name %>              
-
-              <%= label f, :last_name %>
-              <%= text_input f, :last_name %>
+                      
+              <%= label f, :last_name, class: "required" %>
               <%= error_tag f, :last_name %>   
+              <%= text_input f, :last_name %>              
 
               <%= label f, :user_name %>
-              <%= text_input f, :user_name %>
               <%= error_tag f, :user_name %>   
-
+              <%= text_input f, :user_name %>
+              
               <%= label f, :bio %>
               <%= textarea f, :bio %>
               <%= error_tag f, :bio %>   
 
+              <%= label f, :image %>
+              <%= error_tag f, :image %>
+              <%= file_input f, :image %>         
               <%= submit "Submit", class: "button button-lg button-grey button-fullwidth" %>
             <% end %>      									
 						

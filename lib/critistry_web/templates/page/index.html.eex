@@ -13,8 +13,8 @@
 						<div class="row">
 							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 								<p class="lead margin-bottom-20">Please Welcome</p>
-								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
-								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#loginModal" href="#">Join Now</a>
+								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>								
+                <a class="button button-lg button-rounded button-reveal-right-white margin-top-30" data-toggle="modal" data-target="#loginModal" href="#"><i class="ti-arrow-right"></i><span>Join Now</span></a>
 							</div>
 						</div><!-- end row -->
 					</div><!-- end container -->
@@ -28,7 +28,7 @@
 							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 								<p class="lead margin-bottom-20">Please Welcome</p>
 								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
-								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#loginModal" href="#">Join Now</a>
+								<a class="button button-lg button-rounded button-reveal-right-white margin-top-30" data-toggle="modal" data-target="#loginModal" href="#"><i class="ti-arrow-right"></i><span>Join Now</span></a>
 							</div>
 						</div><!-- end row -->
 					</div><!-- end container -->
@@ -42,7 +42,7 @@
 							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 								<p class="lead margin-bottom-20">Please Welcome</p>
 								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
-								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#loginModal" href="#">Join Now</a>
+								<a class="button button-lg button-rounded button-reveal-right-white margin-top-30" data-toggle="modal" data-target="#loginModal" href="#"><i class="ti-arrow-right"></i><span>Join Now</span></a>
 							</div>
 						</div><!-- end row -->
 					</div><!-- end container -->
@@ -56,7 +56,8 @@
 							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
 								<p class="lead margin-bottom-20">Please Welcome</p>
 								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
-								<a class="button button-lg button-border-1px button-outline-white button-rounded margin-top-20" data-toggle="modal" data-target="#loginModal" href="#">Join Now</a>
+								<a class="button button-lg button-rounded button-reveal-right-white margin-top-30" data-toggle="modal" data-target="#loginModal" href="#"><i class="ti-arrow-right"></i><span>Join Now</span></a>
+
 							</div>
 						</div><!-- end row -->
 					</div><!-- end container -->

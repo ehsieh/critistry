@@ -48,8 +48,10 @@ defmodule CritistryWeb.Router do
     get "/my-crit-sessions", DashboardController, :my_crit_sessions
 
     get "/crit-groups", CritGroupController, :list
-    get "/crit-groups/:id", CritGroupController, :show
     get "/crit-groups/new", CritGroupController, :new
+    post "/crit-groups", CritGroupController, :create
+    get "/crit-groups/:id", CritGroupController, :show
+    
 
     get "/crit-sessions/:id", CritSessionController, :show
     get "/crit-groups/:id/crit-sessions/new", CritSessionController, :new

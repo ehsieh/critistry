@@ -6,7 +6,7 @@ defmodule Critistry.Crits.CritGroup do
   schema "crit_groups" do
     field :admin_user_id, :integer
     field :approval_to_join, :boolean, default: false
-    field :avatar, :string    
+    field :image, :string    
     field :description, :string
     field :is_private, :boolean, default: false
     field :max_members, :integer
@@ -21,7 +21,7 @@ defmodule Critistry.Crits.CritGroup do
   @doc false
   def changeset(crit_group, attrs) do
     crit_group
-    |> cast(attrs, [:name, :description, :avatar, :is_private, :approval_to_join, :max_members, :session_duration_days, :admin_user_id, :create_date])
-    |> validate_required([:name, :description, :avatar, :is_private, :approval_to_join, :max_members, :session_duration_days, :admin_user_id, :create_date])
+    |> cast(attrs, [:name, :description, :image, :is_private, :approval_to_join, :max_members, :session_duration_days, :admin_user_id])
+    |> validate_required([:name, :description, :is_private, :approval_to_join, :max_members, :session_duration_days, :admin_user_id])
   end
 end
