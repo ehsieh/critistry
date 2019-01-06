@@ -1,7 +1,5 @@
 defmodule CritistryWeb.UserController do
-  use CritistryWeb, :controller   
-
-  alias Critistry.Auth
+  use CritistryWeb, :controller     
 
   def action(conn, _) do  
     args = [conn, conn.params, Critistry.Auth.Guardian.Plug.current_resource(conn)]

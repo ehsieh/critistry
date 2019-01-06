@@ -36,6 +36,7 @@ defmodule CritistryWeb.Router do
     get "/about", PageController, :about
     get "/contact", PageController, :contact
     get "/faq", PageController, :faq
+    get "/machina", PageController, :machina
   end
 
   scope "/dashboard", CritistryWeb do
@@ -55,9 +56,11 @@ defmodule CritistryWeb.Router do
 
     get "/crit-sessions/:id", CritSessionController, :show
     get "/crit-groups/:id/crit-sessions/new", CritSessionController, :new
+    post "/crit-groups/:id/crit-sessions/new", CritSessionController, :create
 
     get "/crits/:id", CritController, :show
     get "/crit-sessions/:id/crits/new", CritController, :new
+    post "/crit-sessions/:id/crits/new", CritController, :create
 
     get "/users/:id", UserController, :show    
   end

@@ -4,8 +4,7 @@ defmodule Critistry.Crits.Crit do
 
 
   schema "crits" do
-    field :annotations_json, :string
-    field :is_active, :boolean, default: false
+    field :text, :string    
     field :post_date, :utc_datetime
     belongs_to :user, Critistry.Auth.User
     belongs_to :crit_session, Critistry.Crits.CritSession
@@ -16,7 +15,7 @@ defmodule Critistry.Crits.Crit do
   @doc false
   def changeset(crit, attrs) do
     crit
-    |> cast(attrs, [:annotations_json, :is_active, :post_date])
-    |> validate_required([:annotations_json, :is_active, :post_date])
+    |> cast(attrs, [:text, :post_date])
+    |> validate_required([:text])
   end
 end

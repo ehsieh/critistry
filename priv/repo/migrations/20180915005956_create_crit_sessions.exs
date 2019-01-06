@@ -4,9 +4,8 @@ defmodule Critistry.Repo.Migrations.CreateCritSessions do
   def change do
     create table(:crit_sessions) do
       add :name, :string
-      add :description, :string
-      add :image, :string
-      add :is_active, :boolean, default: false, null: false
+      add :description, :text
+      add :image, :string      
       add :start_date, :timestamptz
       add :end_date, :timestamptz
       add :crit_group_id, references(:crit_groups, on_delete: :nothing)

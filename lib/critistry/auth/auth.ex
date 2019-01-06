@@ -3,21 +3,29 @@ defmodule Critistry.Auth do
   alias Critistry.Repo
   alias Critistry.Auth.User
 
+  def get_user!(id) do
+    Repo.get!(User, id)
+  end
+
+  def list_users() do
+    Repo.all(User)
+  end
+
   def find_or_create_user(info) do
     user = find_user_by_email info.email
-    user = 
+    user =
       if (user == nil) do
         {:ok, new_user} = create_user(info)
         new_user
       else
         user
-      end    
+      end
     user
-  end  
+  end
 
   def find_user_by_email(email) do
     user = Repo.get_by(User, email: email)
-    user 
+    user
     |> Repo.preload(:crit_groups)
   end
 
@@ -32,7 +40,7 @@ defmodule Critistry.Auth do
   end
 
   def update_user(%User{} = user, attrs) do
-    user 
+    user
     |> User.changeset(attrs)
     |> Repo.update()
   end

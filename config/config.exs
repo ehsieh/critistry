@@ -41,10 +41,6 @@ config :ueberauth, Ueberauth.Strategy.Google.OAuth,
   client_id: System.get_env("GOOGLE_CLIENT_ID"),
   client_secret: System.get_env("GOOGLE_CLIENT_SECRET")
 
-config :ueberauth, Ueberauth.Strategy.Twitter.OAuth,
-  consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),
-  consumer_secret: System.get_env("TWITTER_CONSUMER_SECRET")
-
 config :critistry, Critistry.Auth.Guardian,
   issuer: "critistry",
   secret_key: "vzyII6cc0fX/7II4v3t+G4XHQ4lFq30hIYELyoHN/jUQRXK21cOpZKdygJnSNlwj"

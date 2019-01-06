@@ -1,9 +1,7 @@
 defmodule Critistry.Auth.ErrorHandler do
-  use CritistryWeb, :controller
-  import Plug.Conn
+  use CritistryWeb, :controller  
   
-  def auth_error(conn, {type, _reason}, _opts) do
-    body = to_string(type)
+  def auth_error(conn, {_type, _reason}, _opts) do    
     conn
     |> Phoenix.Controller.redirect(to: "/#login")
   end

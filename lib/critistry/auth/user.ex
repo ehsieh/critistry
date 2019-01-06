@@ -4,9 +4,8 @@ defmodule Critistry.Auth.User do
 
 
   schema "users" do
-    field :image, :string
-    field :email, :string
-    field :last_login, :utc_datetime
+    field :avatar, :string
+    field :email, :string    
     field :user_name, :string
     field :first_name, :string
     field :last_name, :string
@@ -19,7 +18,7 @@ defmodule Critistry.Auth.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:first_name, :last_name, :user_name, :email, :bio, :image])
+    |> cast(attrs, [:first_name, :last_name, :user_name, :email, :bio, :avatar])
     |> validate_required([:email, :first_name, :last_name])
     |> unique_constraint(:user_name)
   end

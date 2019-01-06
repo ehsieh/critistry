@@ -1,9 +1,7 @@
 defmodule CritistryWeb.DashboardController do
-  use CritistryWeb, :controller
-  import Critistry.Factory
+  use CritistryWeb, :controller  
 
   alias Critistry.Auth
-  alias Critistry.Auth.User
   alias Critistry.Upload
 
   def action(conn, _) do  

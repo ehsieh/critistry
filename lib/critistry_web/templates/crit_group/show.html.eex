@@ -85,6 +85,7 @@
 						<!-- Order -->
 						<div class="margin-top-20 margin-bottom-20">							
 							<a class="button button-lg button-dark" href="#">Join</a>
+							<a class="button button-lg button-dark" href="<%= crit_session_path(@conn, :new, @crit_group.id) %>">New Crit Session</a>
 						</div>						
 					</div>
 				</div><!-- end row -->

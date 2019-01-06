@@ -4,13 +4,11 @@ defmodule Critistry.Repo.Migrations.CreateCritGroups do
   def change do
     create table(:crit_groups) do
       add :name, :string
-      add :description, :string
-      add :image, :string
-      add :is_private, :boolean, default: false, null: false
-      add :approval_to_join, :boolean, default: false, null: false
+      add :description, :text
+      add :image, :string    
       add :max_members, :integer
       add :session_duration_days, :integer
-      add :admin_user_id, :integer      
+      add :admin_user_id, references(:users, on_delete: :nothing)    
     
       timestamps()
     end
