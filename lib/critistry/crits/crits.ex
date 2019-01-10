@@ -21,6 +21,12 @@ defmodule Critistry.Crits do
     Repo.all(CritGroup)
   end
 
+  def join_crit_group(crit_group, user) do
+    Ecto.Changeset.change(crit_group)    
+    |> Ecto.Changeset.put_assoc(:users, [user | crit_group.users])    
+    |> Repo.update()
+  end
+
   def create_crit_group(attrs \\ %{}, user) do
     {:ok, crit_group} = %CritGroup{}
     |> CritGroup.changeset(attrs)
@@ -54,9 +60,10 @@ defmodule Critistry.Crits do
   end
 
   def set_crit_group_admin(crit_group_id, user) do
-    crit_group = get_crit_group!(crit_group_id)
+    crit_group = get_crit_group!(crit_group_id)    
     Ecto.Changeset.change(crit_group)
     |> Ecto.Changeset.put_assoc(:admin_user, user)
+    |> Ecto.Changeset.put_assoc(:users, [user])
     |> Repo.update()
   end
 
@@ -65,6 +72,20 @@ defmodule Critistry.Crits do
     Ecto.Changeset.change(crit_group)
     |> Ecto.Changeset.put_assoc(:categories, categories)
     |> Repo.update()
+  end
+
+  def list_crit_groups_by_category(category_id) do
+    query = from c in "crit_groups_categories", 
+    join: cg in CritGroup, 
+    on: cg.id == c.crit_group_id,     
+    where: c.category_id == ^category_id,
+    select: {cg.id, cg.image, cg.name, cg.description},
+    order_by: cg.name
+    Repo.all(query)
+  end
+
+  def crit_group_member?(crit_group, user) do
+    Enum.filter(crit_group.users, fn x -> x.id == user.id end) != []
   end
 
   ## Crit Session
@@ -96,7 +117,7 @@ defmodule Critistry.Crits do
     crit_session
     |> CritSession.changeset(attrs)
     |> Repo.update()
-  end
+  end  
 
   ## Crit
 
@@ -140,6 +161,16 @@ defmodule Critistry.Crits do
 
     category
     |> Repo.preload(:users)
+  end
+
+  def get_category_counts do
+    query = from c in "crit_groups_categories", 
+    join: cat in Category, 
+    on: cat.id == c.category_id, 
+    group_by: [cat.name, cat.id],
+    select: {cat.name, cat.id, count(cat.name)},
+    order_by: cat.name
+    Repo.all(query)
   end
 
 end

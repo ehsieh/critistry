@@ -4,19 +4,19 @@
     <div class="row col-spacing-50">
       <!-- Blog Posts -->
       <div class="col-12 col-lg-8 blog-small-thumbnail">
-      <%= for crit_group <- @crit_groups do %>
+      <%= for {id, image, name, description} <- @crit_groups do %>
         <div class="blog-post-box">
           <div class="blog-post-img">
-            <a href="<%= crit_group_path(@conn, :show, crit_group.id) %>">
-              <img src="<%=crit_group.image%>" alt="">
+            <a href="<%= crit_group_path(@conn, :show, id) %>">
+              <img src="<%=image%>" alt="">
             </a>
           </div>
           <div class="blog-post-content">
             <div class="blog-post-title margin-bottom-10">              
-              <h5><a href="<%= crit_group_path(@conn, :show, crit_group.id) %>"><%=crit_group.name%></a></h5>
+              <h5><a href="<%= crit_group_path(@conn, :show, id) %>"><%=name%></a></h5>
             </div>
-            <p><%=crit_group.description%></p>
-            <a class="text-btn-3 margin-top-20" href="<%= crit_group_path(@conn, :show, crit_group.id) %>">Details</a>
+            <p><%=description%></p>
+            <a class="text-btn-3 margin-top-20" href="<%= crit_group_path(@conn, :show, id) %>">Details</a>
           </div>
         </div>
       <% end %>        

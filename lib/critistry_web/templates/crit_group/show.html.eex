@@ -1,91 +1,38 @@
 <!-- Page header -->
+  <header>
 			<div class="page-title-xs bg-grey">
 				<div class="container text-center">
 					<nav aria-label="breadcrumb">
 						<ul class="breadcrumb">
 							<li class="breadcrumb-item"><a href="#">Home</a></li>
-							<li class="breadcrumb-item"><a href="#">Pages</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Shop</li>
+							<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Crit Group</li>
 						</ul>
 					</nav>
 				</div><!-- end container -->
 			</div><!-- end page-title -->
-		</header>
-
-		<!-- Scroll to top button -->
-		<div class="scrolltotop">
-			<a class="button-circle button-circle-sm button-circle-dark" href="#"><i class="ti-arrow-up"></i></a>
-		</div>
-		<!-- end Scroll to top button -->
-
-		<!-- Fullscreen Search Form -->
-		<div class="search-wrapper">
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center">
-						<form class="form-style-5">
-							<input class="font-large" type="text" placeholder="Search.." name="search" required>
-							<button><i class="fa fa-search"></i></button>
-						</form>
-					</div>
-				</div><!-- end row -->
-			</div><!-- end container -->
-		</div>
-		<!-- end Fullscreen Search Form -->
+		</header>		
 
 		<!-- Product Content -->
 		<div class="section">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-12 col-lg-6 product-single">
-						<div class="product-single-img">
-							<div class="product-single-img-nav">
-								<a href="#first">
-									<img src="/images/img-circle-small.jpg">
-								</a>
-								<a href="#second">
-									<img src="/images/img-circle-small.jpg">
-								</a>
-								<a href="#third">
-									<img src="/images/img-circle-small.jpg">
-								</a>
-								<a href="#fourth">
-									<img src="/images/img-circle-small.jpg">
-								</a>
-							</div>
-							<div class="owl-carousel product-single-img-slider" data-owl-items="1" data-owl-nav="true">
-								<div data-hash="first">
-									<img src="/images/col-2-square.jpg">
-								</div>
-								<div data-hash="second">
-									<img src="/images/col-2-square.jpg">
-								</div>
-								<div data-hash="third">
-									<img src="/images/col-2-square.jpg">
-								</div>
-								<div data-hash="fourth">
-									<img src="/images/col-2-square.jpg">
-								</div>
-							</div>
-						</div>
+            <img src="<%=@crit_group.image%>" alt="">						
 					</div>
 					<div class="col-12 col-lg-6">						
 						<!-- Product Title -->
-						<h4>Single Product Title</h4>
-						<!-- Product Rating -->
-						<div class="product-rating margin-bottom-20">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="far fa-star"></i>
-						</div>
+						<h4><%= @crit_group.name %></h4>
+						<!-- Product Rating -->						
 						<!-- Product text -->
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<p><%= @crit_group.description%></p>
 						<!-- Order -->
-						<div class="margin-top-20 margin-bottom-20">							
-							<a class="button button-lg button-dark" href="#">Join</a>
-							<a class="button button-lg button-dark" href="<%= crit_session_path(@conn, :new, @crit_group.id) %>">New Crit Session</a>
+						<div class="margin-top-20 margin-bottom-20">						
+              <%= if member?(@crit_group, @user) do %>              	              
+                <a class="button button-lg button-dark" href="<%= crit_session_path(@conn, :new, @crit_group.id) %>">New Crit Session</a>
+              <% else %>
+							  <a class="button button-lg button-dark" href="<%= crit_group_path(@conn, :join, @crit_group.id) %>">Join</a>							
+              <% end %>
 						</div>						
 					</div>
 				</div><!-- end row -->
@@ -93,99 +40,29 @@
 		</div>
 		<!-- end Product Content -->
 
-		<!-- Product Tab content -->
-		<div class="section no-padding-top">
-			<div class="container">
-				<div class="product-tab">
-					<ul class="nav margin-bottom-20">
-						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#tab-description"><h5 class="font-weight-light">Description</h5></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#tab-reviews"><h5 class="font-weight-light">Reviews <span>(3)</span></h5></a>
-						</li>
-					</ul>
-					<div class="tab-content">
-						<!-- Description tab content -->
-						<div class="tab-pane fade show active" id="tab-description">
-							<div class="margin-bottom-20">
-								<h6 class="heading-uppercase">Heading</h6>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-							</div>
-							<div>
-								<h6 class="heading-uppercase">Heading</h6>
-								<p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-							</div>
-						</div>
-						<!-- Reviews tab content -->
-						<div class="tab-pane fade" id="tab-reviews">
-							<!-- Review box 1 -->
-							<div class="product-tab-review">
-								<div class="product-tab-review-user">
-									<i class="fa fa-user"></i>
-								</div>
-								<div class="product-tab-review-content">
-									<span class="product-tab-review-time">Feb 16, 2018</span>
-									<h6 class="heading-uppercase">Alexander Warren</h6>
-									<div class="product-rating">
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-									</div>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-								</div>
-							</div>
-							<!-- Review box 2 -->
-							<div class="product-tab-review">
-								<div class="product-tab-review-user">
-									<i class="fa fa-user"></i>
-								</div>
-								<div class="product-tab-review-content">
-									<span class="product-tab-review-time">Feb 14, 2018</span>
-									<h6 class="heading-uppercase">John Doe</h6>
-									<div class="product-rating">
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="far fa-star"></i>
-									</div>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-								</div>
-							</div>
-							<!-- Review box 3 -->
-							<div class="product-tab-review">
-								<div class="product-tab-review-user">
-									<i class="fa fa-user"></i>
-								</div>
-								<div class="product-tab-review-content">
-									<span class="product-tab-review-time">Feb 12, 2018</span>
-									<h6 class="heading-uppercase">Melissa Bakos</h6>
-									<div class="product-rating">
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-									</div>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-								</div>
-							</div>
-							<!-- end Review box 3 -->
-						</div>
-					</div>
-				</div>
-			</div><!-- end container -->
-		</div>
-		<!-- end Product Tab content -->
-
+  <div class="section border-top">
+    <div class="container">
+      <div class="section-title text-center">
+        <h3>Members</h3>
+      </div>
+      <div class="owl-carousel" data-owl-items="4" data-owl-dots="false" data-owl-nav="true">
+        <%= for user <- @crit_group.users do %>
+          <div class="testimonial-box">        
+            <img class="margin-bottom-20" src="<%= user.avatar%>" alt="">
+            <h5 class="no-margin"><%= user.user_name %></h5>
+          </div>
+        <% end %>      
+      </div>      
+    </div><!-- end owl-carousel -->   
+    </div>
+  </div>  
+    
+  </div>
 		<!-- Products Slider -->
 		<div class="section border-top">
 			<div class="container">
 				<div class="section-title text-center">
-					<h3>Related Products</h3>
+					<h3>Recent Crit Sessions</h3>
 				</div>
 				<div class="owl-carousel" data-owl-nav="true" data-owl-dots="false" data-owl-margin="30" data-owl-xs="1" data-owl-sm="2" data-owl-md="3" data-owl-lg="4" data-owl-xl="4">
 					<!-- Product Slider box 1 -->

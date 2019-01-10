@@ -5,9 +5,7 @@ defmodule CritistryWeb.PageController do
 
   alias Critistry.Repo
   alias Critistry.Auth
-  alias Critistry.Auth.User
   alias Critistry.Crits
-  alias Critistry.Crits.CritGroup
   alias Critistry.Crits.Category
 
 
@@ -37,19 +35,19 @@ defmodule CritistryWeb.PageController do
   def machina(conn, _params) do
     insert_list(35, :user, %{})
     insert_list(35, :crit_group, %{})
-    insert_list(20, :category, %{})
-    users = Auth.list_users
-    users
-    |> Enum.each(fn(u) -> Crits.set_crit_group_admin(u.id, u) end)
+    insert_list(20, :category, %{})   
+   
     crit_groups = Crits.list_crit_groups
     crit_groups
-    |> Enum.each(fn(c) -> set_random_categories(c.id, Enum.take_random(1..20, 3)) end)
+    |> Enum.each(fn(c) -> setup_crit_group(c.id) end)
     render conn, "faq.html"
   end
 
-  defp set_random_categories(crit_group_id, category_ids) do
+  defp setup_crit_group(crit_group_id) do
+    category_ids = Enum.take_random(1..20, 3)
     query = from c in Category, where: c.id in ^(category_ids), preload: [:crit_groups]
     categories = Repo.all(query)
     Crits.set_crit_group_categories(crit_group_id, categories)
+    Crits.set_crit_group_admin(crit_group_id, Auth.get_user!(crit_group_id))
   end
 end

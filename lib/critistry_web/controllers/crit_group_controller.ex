@@ -11,7 +11,15 @@ defmodule CritistryWeb.CritGroupController do
   end
 
   def list(conn, _params, user) do
-    render conn, "list.html"
+    crit_groups = Crits.list_crit_groups
+    categories = Crits.get_category_counts
+    render conn, "list.html", crit_groups: crit_groups, categories: categories
+  end
+
+  def list_by_category(conn, %{"id" => id}, user) do
+    crit_groups = Crits.list_crit_groups_by_category String.to_integer(id)
+    categories = Crits.get_category_counts
+    render conn, "list_by_category.html", crit_groups: crit_groups, categories: categories
   end
 
   def new(conn, _params, user) do
@@ -45,6 +53,11 @@ defmodule CritistryWeb.CritGroupController do
     |> create_crit_group(user, crit_group_params)
   end
 
+  def join(conn, %{"id" => id}, user) do
+    crit_group = Crits.get_crit_group!(id)
+    Crits.join_crit_group(crit_group, user)
+    conn |> redirect(to: crit_group_path(conn, :show, crit_group))    
+  end
 
   def show(conn, %{"id" => id}, user) do
     crit_group = Crits.get_crit_group!(id)

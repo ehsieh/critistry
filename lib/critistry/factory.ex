@@ -14,7 +14,7 @@ defmodule Critistry.Factory do
 
   def crit_group_factory do
     %Critistry.Crits.CritGroup{
-      image: sequence(:avatar, &"/images/crit-groups/crit-group-#{&1}.jpg"),
+      image: sequence(:image, &"/images/crit-groups/crit-group-#{&1}.jpg"),
       description: Elixilorem.paragraph,
       max_members: sequence(:max_members, [4, 6, 8, 10]),
       name: Elixilorem.sentence,

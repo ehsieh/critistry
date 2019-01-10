@@ -2,3 +2,8 @@
   <i class="ti-arrow-right"></i>
   <span>New Crit Group</span>
 </a>
+
+<a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="<%= crit_group_path(@conn, :list) %>">
+  <i class="ti-arrow-right"></i>
+  <span>Crit Groups</span>
+</a>

@@ -8,7 +8,7 @@ defmodule Critistry.Auth.Guardian do
   
     def resource_from_claims(%{"sub" => email}) do
         IO.puts "resource_from_claims"
-        user = Critistry.Auth.find_user_by_email("email-173@example.com")
+        user = Critistry.Auth.find_user_by_email("email-10@example.com")
         IO.inspect user     
         case user do
           nil -> {:error, nil}
