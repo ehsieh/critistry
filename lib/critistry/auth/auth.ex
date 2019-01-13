@@ -4,7 +4,9 @@ defmodule Critistry.Auth do
   alias Critistry.Auth.User
 
   def get_user!(id) do
-    Repo.get!(User, id)
+    user = Repo.get!(User, id)
+    user
+    |> Repo.preload(:crit_groups)
   end
 
   def list_users() do

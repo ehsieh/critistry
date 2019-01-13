@@ -91,7 +91,12 @@ defmodule Critistry.Crits do
   ## Crit Session
 
   def get_crit_session!(id) do
-    Repo.get!(CritSession, id)
+    crit_session = Repo.get!(CritSession, id)
+
+    crit_session
+    |> Repo.preload(:crit_group)
+    |> Repo.preload(:user)
+    |> Repo.preload(:crit)
   end
 
   def create_crit_session(attrs \\ %{}, user, crit_group) do
@@ -119,10 +124,28 @@ defmodule Critistry.Crits do
     |> Repo.update()
   end  
 
+  def setup_crit_session(crit_session_id, user, crit_group_id) do
+    crit_session = get_crit_session!(crit_session_id)
+    crit_group = get_crit_group!(crit_group_id)
+
+    Ecto.Changeset.change(crit_session)
+    |> Ecto.Changeset.put_assoc(:user, user)
+    |> Ecto.Changeset.put_assoc(:crit_group, crit_group)
+    |> Repo.update()
+  end
+
   ## Crit
 
   def get_crit!(id) do
-    Repo.get!(Crit, id)
+    crit = Repo.get!(Crit, id)
+
+    crit 
+    |> Repo.preload(:crit_session)
+    |> Repo.preload(:user)
+  end
+
+  def list_crits do
+    Repo.all(Crit)
   end
 
   def create_crit(attrs \\ %{}, user, crit_session) do
@@ -147,6 +170,16 @@ defmodule Critistry.Crits do
   def update_crit(%Crit{} = crit, attrs) do
     crit
     |> Crit.changeset(attrs)
+    |> Repo.update()
+  end
+
+  def setup_crit(crit_id, user, crit_session_id) do
+    crit_session = get_crit_session!(crit_session_id)
+    crit = get_crit!(crit_id)
+
+    Ecto.Changeset.change(crit)
+    |> Ecto.Changeset.put_assoc(:user, user)
+    |> Ecto.Changeset.put_assoc(:crit_session, crit_session)
     |> Repo.update()
   end
 

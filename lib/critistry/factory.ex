@@ -24,9 +24,15 @@ defmodule Critistry.Factory do
 
   def crit_session_factory do
     %Critistry.Crits.CritSession{
-      description: Elixilorem.paragraph,
-      image: "",
+      image: sequence(:image, &"/images/crit-sessions/crit-session-#{&1}.jpg"),
+      description: Elixilorem.paragraph,      
       name: Elixilorem.sentence
+    }
+  end
+
+  def crit_factory do
+    %Critistry.Crits.Crit {      
+      text: Elixilorem.paragraphs
     }
   end
 

@@ -36,7 +36,7 @@ defmodule CritistryWeb.Router do
     get "/about", PageController, :about
     get "/contact", PageController, :contact
     get "/faq", PageController, :faq
-    get "/machina", PageController, :machina
+    get "/machina/:num_users/:num_categories/:crit_session_factor/:crit_factor", PageController, :machina
   end
 
   scope "/dashboard", CritistryWeb do

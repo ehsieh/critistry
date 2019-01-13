@@ -3,8 +3,7 @@ defmodule Critistry.Repo.Migrations.CreateCrits do
 
   def change do
     create table(:crits) do
-      add :text, :text      
-      add :post_date, :timestamptz
+      add :text, :text            
       add :user_id, references(:users, on_delete: :nothing)
       add :crit_session_id, references(:crit_sessions, on_delete: :nothing)
 

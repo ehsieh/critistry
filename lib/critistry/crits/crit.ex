@@ -4,8 +4,7 @@ defmodule Critistry.Crits.Crit do
 
 
   schema "crits" do
-    field :text, :string    
-    field :post_date, :utc_datetime
+    field :text, :string        
     belongs_to :user, Critistry.Auth.User
     belongs_to :crit_session, Critistry.Crits.CritSession
 
@@ -15,7 +14,7 @@ defmodule Critistry.Crits.Crit do
   @doc false
   def changeset(crit, attrs) do
     crit
-    |> cast(attrs, [:text, :post_date])
+    |> cast(attrs, [:text])
     |> validate_required([:text])
   end
 end
