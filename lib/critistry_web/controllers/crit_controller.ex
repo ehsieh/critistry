@@ -29,7 +29,8 @@ defmodule CritistryWeb.CritController do
 
   def show(conn, %{"id" => id}, user) do
     crit = Crits.get_crit!(id)    
-    render(conn, "show.html", user: user, crit: crit)
+    user_crits = Crits.get_crit_session_user_crits(crit.crit_session.id)
+    render(conn, "show.html", user: user, crit: crit, user_crits: user_crits)
   end
 end
   

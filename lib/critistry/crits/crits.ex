@@ -5,6 +5,7 @@ defmodule Critistry.Crits do
   alias Critistry.Crits.CritSession
   alias Critistry.Crits.Crit
   alias Critistry.Crits.Category
+  alias Critistry.Auth.User
 
   ## Crit Group
 
@@ -97,6 +98,23 @@ defmodule Critistry.Crits do
     |> Repo.preload(:crit_group)
     |> Repo.preload(:user)
     |> Repo.preload(:crit)
+  end
+
+  def get_crit_sessions(crit_group_id) do
+    query = from cs in CritSession, 
+    where: cs.crit_group_id == ^crit_group_id
+    Repo.all(query)
+  end
+
+  def get_crit_session_user_crits(crit_session_id) do
+    query = from cs in CritSession,
+    join: c in Crit,
+    on: c.crit_session_id == cs.id,
+    join: u in User,
+    on: u.id == c.user_id,
+    where: cs.id == ^crit_session_id,
+    select: {c.id, u.user_name, u.avatar}
+    Repo.all(query)
   end
 
   def create_crit_session(attrs \\ %{}, user, crit_group) do

@@ -80,13 +80,15 @@ defmodule CritistryWeb.PageController do
     |> Enum.each(fn(u) -> setup_crit(u.id, crit_factor) end)
   end
 
-  defp setup_crit(user_id, crit_factor) do        
+  defp setup_crit(user_id, crit_factor) do   
+    IO.inspect user_id     
     query = from c in "users_crit_groups", 
     join: cs in CritSession, on: cs.crit_group_id == c.crit_group_id, 
     where: c.user_id == ^user_id and cs.user_id != ^user_id, 
     select: cs.id
 
     crit_sessions = Repo.all(query)
+    IO.inspect crit_sessions
 
     #def setup_crit(crit_id, user, crit_session_id) do
 

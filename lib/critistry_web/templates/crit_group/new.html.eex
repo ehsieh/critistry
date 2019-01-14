@@ -1,71 +1,71 @@
 <!-- Page header -->
 <header>
-			<div class="bg-image parallax" style="background-image: url(/images/background1.jpg)">
-				<div class="page-title-xs bg-black-07 text-center">
-					<div class="container">
-						<nav aria-label="breadcrumb">
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#">Home</a></li>
-								<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-								<li class="breadcrumb-item active" aria-current="page">New Crit Group</li>
-							</ul>
-						</nav>
-					</div><!-- end container -->
-				</div><!-- end page-title -->
-			</div><!-- end bg-image -->
-			<!-- end Page header -->
-		</header>
+  <div class="bg-image parallax" style="background-image: url(/images/background1.jpg)">
+    <div class="page-title-xs bg-black-07 text-center">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">New Crit Group</li>
+          </ul>
+        </nav>
+      </div><!-- end container -->
+    </div><!-- end page-title -->
+  </div><!-- end bg-image -->
+  <!-- end Page header -->
+</header>
 
-		<!-- About section -->
-		<div class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-						<h4 class="margin-bottom-50 text-center">New Crit Group</h4>
-						<div class="">
-            <%= form_for @changeset, crit_group_path(@conn, :create), [multipart: true], fn f -> %>
-              <%= if @changeset.action do %>
-                <div class="alert alert-danger">
-                  <p>Oops, something went wrong! Please check the errors below.</p>
-                </div>
-              <% end %>                  
+<!-- About section -->
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+        <h4 class="margin-bottom-50 text-center">New Crit Group</h4>
+        <div class="">
+        <%= form_for @changeset, crit_group_path(@conn, :create), [multipart: true], fn f -> %>
+          <%= if @changeset.action do %>
+            <div class="alert alert-danger">
+              <p>Oops, something went wrong! Please check the errors below.</p>
+            </div>
+          <% end %>                  
 
-							<%= label f, :image %>
-              <%= error_tag f, :image %>
-              <%= file_input f, :image %>         
+          <%= label f, :image %>
+          <%= error_tag f, :image %>
+          <%= file_input f, :image %>         
 
-              <%= label f, :name, class: "required" %>
-              <%= error_tag f, :name %>      
-              <%= text_input f, :name %>
-                      
-              <%= label f, :description, class: "required" %>
-              <%= error_tag f, :description %>   
-              <%= textarea f, :description %>           
+          <%= label f, :name, class: "required" %>
+          <%= error_tag f, :name %>      
+          <%= text_input f, :name %>
+                  
+          <%= label f, :description, class: "required" %>
+          <%= error_tag f, :description %>   
+          <%= textarea f, :description %>           
 
-							<%= label f, :categories, class: "required" %>
-							<%= error_tag f, :cat %>   
-							<%= multiple_select f, :cat, @category_list, class: "custom-select w-100" %>
-							<br/>
-							<br/>
-              <%= label f, :max_members %>
-              <%= error_tag f, :max_members %>   
-              <%= select f, :max_members, 5..10, class: "custom-select" %>
-              
-              <%= label f, :session_duration_days %>
-              <%= error_tag f, :session_duration_days %>   
-              <%= select f, :session_duration_days, 7..14, class: "custom-select" %>
-							<br/>
-							<br/>
-              <%= submit "Submit", class: "button button-lg button-dark" %>
-							<br/>
-							<br/>
-            <% end %>      									
-						
-					</div>
-				</div><!-- end row -->
-			</div><!-- end container -->
-		</div>
-		<!-- end About section -->
+          <%= label f, :categories, class: "required" %>
+          <%= error_tag f, :cat %>   
+          <%= multiple_select f, :cat, @category_list, class: "custom-select w-100" %>
+          <br/>
+          <br/>
+          <%= label f, :max_members %>
+          <%= error_tag f, :max_members %>   
+          <%= select f, :max_members, 5..10, class: "custom-select" %>
+          
+          <%= label f, :session_duration_days %>
+          <%= error_tag f, :session_duration_days %>   
+          <%= select f, :session_duration_days, 7..14, class: "custom-select" %>
+          <br/>
+          <br/>
+          <%= submit "Submit", class: "button button-lg button-dark" %>
+          <br/>
+          <br/>
+        <% end %>      									
+        
+      </div>
+    </div><!-- end row -->
+  </div><!-- end container -->
+</div>
+<!-- end About section -->
 
 	
 

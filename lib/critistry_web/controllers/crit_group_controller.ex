@@ -61,7 +61,7 @@ defmodule CritistryWeb.CritGroupController do
 
   def show(conn, %{"id" => id}, user) do
     crit_group = Crits.get_crit_group!(id)
-    IO.inspect crit_group
-    render(conn, "show.html", user: user, crit_group: crit_group)
+    crit_sessions = Crits.get_crit_sessions(id)
+    render(conn, "show.html", user: user, crit_group: crit_group, crit_sessions: crit_sessions)
   end
 end
