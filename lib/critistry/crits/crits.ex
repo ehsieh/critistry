@@ -106,6 +106,12 @@ defmodule Critistry.Crits do
     Repo.all(query)
   end
 
+  def get_user_crit_sessions(user) do
+    query = from cs in CritSession, 
+    where: cs.user_id == ^user.id
+    Repo.all(query)
+  end
+
   def get_crit_session_user_crits(crit_session_id) do
     query = from cs in CritSession,
     join: c in Crit,

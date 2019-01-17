@@ -3,6 +3,7 @@ defmodule CritistryWeb.DashboardController do
 
   alias Critistry.Auth
   alias Critistry.Upload
+  alias Critistry.Crits
 
   def action(conn, _) do  
     args = [conn, conn.params, Critistry.Auth.Guardian.Plug.current_resource(conn)]
@@ -12,7 +13,8 @@ defmodule CritistryWeb.DashboardController do
   def index(conn, _params, user) do
     #insert_list(100, :crit_session)    
     IO.inspect user
-    render(conn, "index.html", user: user)
+    crit_sessions = Crits.get_user_crit_sessions user
+    render(conn, "index.html", user: user, crit_sessions: crit_sessions)
   end    
 
   def my_profile(conn, _params, user) do

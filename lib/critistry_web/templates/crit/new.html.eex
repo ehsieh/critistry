@@ -5,8 +5,10 @@
             <div class="container">
                 <nav aria-label="breadcrumb">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<%= dashboard_path(@conn, :index) %>">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="<%= crit_group_path(@conn, :show, @crit_session.crit_group.id) %>">Crit Group</a></li>
+                        <li class="breadcrumb-item"><a href="<%= crit_session_path(@conn, :show, @crit_session.id) %>">Crit Session</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Post Crit</li>
                     </ul>
                 </nav>

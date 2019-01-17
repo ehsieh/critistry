@@ -31,7 +31,7 @@
         <p><%= @crit_group.description%></p>
         <!-- Order -->
         <div class="margin-top-20 margin-bottom-20">						
-          <%= if member?(@crit_group, @user) do %>              	              
+          <%= if member?(@crit_group, @user) do %>
             <a class="button button-lg button-dark" href="<%= crit_session_path(@conn, :new, @crit_group.id) %>">New Crit Session</a>
           <% else %>
             <a class="button button-lg button-dark" href="<%= crit_group_path(@conn, :join, @crit_group.id) %>">Join</a>							

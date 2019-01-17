@@ -1,9 +1,68 @@
-<a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="<%= crit_group_path(@conn, :new) %>">
-  <i class="ti-arrow-right"></i>
-  <span>New Crit Group</span>
-</a>
 
-<a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="<%= crit_group_path(@conn, :list) %>">
-  <i class="ti-arrow-right"></i>
-  <span>Crit Groups</span>
-</a>
+
+<!-- Products Slider -->
+<div class="section border-top">
+  <div class="container">
+    <div class="section-title text-center">
+      <h3>My Crit Groups</h3>
+    </div>
+    <div class="owl-carousel" data-owl-nav="true" data-owl-dots="false" data-owl-margin="30" data-owl-xs="1" data-owl-sm="2" data-owl-md="3" data-owl-lg="4" data-owl-xl="5">
+      <!-- Product Slider box 1 -->
+      <%= for crit_group <- @user.crit_groups do %>
+         <div class="product">
+        <div class="product-img">
+          <a href="<%= crit_group_path(@conn, :show, crit_group.id)%>">
+            <img src="<%= crit_group.image %>" alt="">           
+          </a>
+          <div class="product-img-hover">
+            <h6 class="heading-uppercase"><a href="<%= crit_group_path(@conn, :show, crit_group.id)%>">Go to Crit Group</a></h6>
+          </div>
+        </div><!-- end product-img -->
+        <div class="product-info">
+          <h6><a href="<%= crit_group_path(@conn, :show, crit_group.id)%>"><%= crit_group.name %></a></h6>          
+        </div><!-- end product-info -->
+      </div>
+      <% end %>                
+    </div><!-- end owl-carousel -->
+    <div class="text-center">
+      <a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="<%= crit_group_path(@conn, :new) %>">
+        <i class="ti-arrow-right"></i>
+        <span>New Crit Group</span>
+      </a>
+
+      <a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="<%= crit_group_path(@conn, :list) %>">
+        <i class="ti-arrow-right"></i>
+        <span>All Crit Groups</span>
+      </a>
+    </div>
+  </div><!-- end container -->
+</div>
+<!-- end Products Slider -->
+
+<!-- Products Slider -->
+<div class="section border-top">
+  <div class="container">
+    <div class="section-title text-center">
+      <h3>My Crit Sessions</h3>
+    </div>
+    <div class="owl-carousel" data-owl-nav="true" data-owl-dots="false" data-owl-margin="30" data-owl-xs="1" data-owl-sm="2" data-owl-md="3" data-owl-lg="4" data-owl-xl="5">
+      <!-- Product Slider box 1 -->
+      <%= for crit_session <- @crit_sessions do %>
+         <div class="product">
+        <div class="product-img">
+          <a href="<%= crit_session_path(@conn, :show, crit_session.id)%>">
+            <img src="<%= crit_session.image %>" alt="">           
+          </a>
+          <div class="product-img-hover">
+            <h6 class="heading-uppercase"><a href="<%= crit_session_path(@conn, :show, crit_session.id)%>">Go to Session</a></h6>
+          </div>
+        </div><!-- end product-img -->
+        <div class="product-info">
+          <h6><a href="<%= crit_session_path(@conn, :show, crit_session.id)%>"><%= crit_session.name %></a></h6>          
+        </div><!-- end product-info -->
+      </div>
+      <% end %>                
+    </div><!-- end owl-carousel -->
+  </div><!-- end container -->
+</div>
+<!-- end Products Slider -->
