@@ -9,18 +9,18 @@ defmodule CritistryWeb.Router do
     plug :put_secure_browser_headers
   end
 
-  pipeline :auth do    
+  pipeline :auth do
     plug Guardian.Plug.Pipeline, module: Critistry.Auth.Guardian,
-      error_handler: Critistry.Auth.ErrorHandler   
+      error_handler: Critistry.Auth.ErrorHandler
     plug Guardian.Plug.VerifySession
-    plug Guardian.Plug.EnsureAuthenticated    
+    plug Guardian.Plug.EnsureAuthenticated
     plug Guardian.Plug.LoadResource
   end
 
-  pipeline :home_auth do   
+  pipeline :home_auth do
     plug Guardian.Plug.Pipeline, module: Critistry.Auth.Guardian,
       error_handler: Critistry.Auth.ErrorHandler
-    plug Guardian.Plug.VerifySession    
+    plug Guardian.Plug.VerifySession
     plug Guardian.Plug.LoadResource, allow_blank: true
   end
 
@@ -42,7 +42,7 @@ defmodule CritistryWeb.Router do
   scope "/dashboard", CritistryWeb do
     pipe_through [:browser, :auth]
 
-    get "/", DashboardController, :index   
+    get "/", DashboardController, :index
     get "/my-profile", DashboardController, :my_profile
     put "/my-profile", DashboardController, :update_my_profile
     get "/my-crit-requests", DashboardController, :my_crit_requests
@@ -54,7 +54,7 @@ defmodule CritistryWeb.Router do
     get "/crit-groups/:id", CritGroupController, :show
     get "/crit-groups/categories/:id", CritGroupController, :list_by_category
     get "/crit-groups/join/:id", CritGroupController, :join
-    
+
 
     get "/crit-sessions/:id", CritSessionController, :show
     get "/crit-groups/:id/crit-sessions/new", CritSessionController, :new
@@ -64,18 +64,28 @@ defmodule CritistryWeb.Router do
     get "/crit-sessions/:id/crits/new", CritController, :new
     post "/crit-sessions/:id/crits/new", CritController, :create
 
-    get "/users/:id", UserController, :show    
+    get "/users/:id", UserController, :show
   end
 
   scope "/auth", CritistryWeb do
     pipe_through :browser
-  
+
     get "/:provider", AuthController, :request
     get "/:provider/callback", AuthController, :callback
   end
- 
-  # Other scopes may use custom stacks.
-  # scope "/api", CritistryWeb do
-  #   pipe_through :api
-  # end
+
+  scope "/api" do
+    pipe_through :api
+
+    forward "/", Absinthe.Plug,
+      schema: CritistryWeb.Schema
+  end
+
+  scope "/graphiql" do
+    pipe_through :api
+
+    forward "/", Absinthe.Plug.GraphiQL,
+      schema: CritistryWeb.Schema,
+      interface: :simple
+  end
 end

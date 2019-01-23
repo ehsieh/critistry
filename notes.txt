@@ -23,3 +23,9 @@ Animation
 File.ls! |> Enum.with_index |> Enum.each(fn({x, i}) -> File.rename(x, "crit-session-#{i}.jpg") end)
 
 query = from c in "users_crit_groups", join: cs in CritSession, on: cs.crit_group_id == c.crit_group_id, where: c.user_id == 1 and cs.user_id != 1, select: {c.user_id, cs.crit_group_id, cs.id, cs.user_id}
+
+
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo apt-get install postgresql-10

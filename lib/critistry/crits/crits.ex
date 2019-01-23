@@ -23,8 +23,8 @@ defmodule Critistry.Crits do
   end
 
   def join_crit_group(crit_group, user) do
-    Ecto.Changeset.change(crit_group)    
-    |> Ecto.Changeset.put_assoc(:users, [user | crit_group.users])    
+    Ecto.Changeset.change(crit_group)
+    |> Ecto.Changeset.put_assoc(:users, [user | crit_group.users])
     |> Repo.update()
   end
 
@@ -61,7 +61,7 @@ defmodule Critistry.Crits do
   end
 
   def set_crit_group_admin(crit_group_id, user) do
-    crit_group = get_crit_group!(crit_group_id)    
+    crit_group = get_crit_group!(crit_group_id)
     Ecto.Changeset.change(crit_group)
     |> Ecto.Changeset.put_assoc(:admin_user, user)
     |> Ecto.Changeset.put_assoc(:users, [user])
@@ -76,9 +76,9 @@ defmodule Critistry.Crits do
   end
 
   def list_crit_groups_by_category(category_id) do
-    query = from c in "crit_groups_categories", 
-    join: cg in CritGroup, 
-    on: cg.id == c.crit_group_id,     
+    query = from c in "crit_groups_categories",
+    join: cg in CritGroup,
+    on: cg.id == c.crit_group_id,
     where: c.category_id == ^category_id,
     select: {cg.id, cg.image, cg.name, cg.description},
     order_by: cg.name
@@ -101,13 +101,17 @@ defmodule Critistry.Crits do
   end
 
   def get_crit_sessions(crit_group_id) do
-    query = from cs in CritSession, 
+    query = from cs in CritSession,
     where: cs.crit_group_id == ^crit_group_id
     Repo.all(query)
   end
 
+  def list_crit_sessions do
+    Repo.all(CritSession)
+  end
+
   def get_user_crit_sessions(user) do
-    query = from cs in CritSession, 
+    query = from cs in CritSession,
     where: cs.user_id == ^user.id
     Repo.all(query)
   end
@@ -146,7 +150,7 @@ defmodule Critistry.Crits do
     crit_session
     |> CritSession.changeset(attrs)
     |> Repo.update()
-  end  
+  end
 
   def setup_crit_session(crit_session_id, user, crit_group_id) do
     crit_session = get_crit_session!(crit_session_id)
@@ -163,7 +167,7 @@ defmodule Critistry.Crits do
   def get_crit!(id) do
     crit = Repo.get!(Crit, id)
 
-    crit 
+    crit
     |> Repo.preload(:crit_session)
     |> Repo.preload(:user)
   end
@@ -221,9 +225,9 @@ defmodule Critistry.Crits do
   end
 
   def get_category_counts do
-    query = from c in "crit_groups_categories", 
-    join: cat in Category, 
-    on: cat.id == c.category_id, 
+    query = from c in "crit_groups_categories",
+    join: cat in Category,
+    on: cat.id == c.category_id,
     group_by: [cat.name, cat.id],
     select: {cat.name, cat.id, count(cat.name)},
     order_by: cat.name
