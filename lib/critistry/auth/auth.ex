@@ -3,6 +3,14 @@ defmodule Critistry.Auth do
   alias Critistry.Repo
   alias Critistry.Auth.User
 
+  def data() do
+    Dataloader.Ecto.new(Repo, query: &query/2)
+  end
+
+  def query(queryable, _params) do
+    queryable
+  end
+
   def get_user!(id) do
     user = Repo.get!(User, id)
     user

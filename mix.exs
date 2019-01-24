@@ -62,7 +62,8 @@ defmodule Critistry.Mixfile do
       {:hackney, "~> 1.6"},
       {:uuid, "~> 1.1" },
       {:absinthe, "~> 1.4.0"},
-      {:absinthe_plug, "~> 1.4.0"}
+      {:absinthe_plug, "~> 1.4.0"},
+      {:dataloader, "~> 1.0.0"}
     ]
   end
 

@@ -7,6 +7,14 @@ defmodule Critistry.Crits do
   alias Critistry.Crits.Category
   alias Critistry.Auth.User
 
+  def data() do
+    Dataloader.Ecto.new(Repo, query: &query/2)
+  end
+
+  def query(queryable, _params) do
+    queryable
+  end
+
   ## Crit Group
 
   def get_crit_group!(id) do
