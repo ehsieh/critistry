@@ -242,4 +242,15 @@ defmodule Critistry.Crits do
     Repo.all(query)
   end
 
+  def get_crit_group_count do
+    Repo.one(from cg in CritGroup, select: count(cg.id))
+  end
+
+  def get_crit_session_count do
+    Repo.one(from cs in CritSession, select: count(cs.id))
+  end
+
+  def get_crit_count do
+    Repo.one(from c in Crit, select: count(c.id))
+  end
 end

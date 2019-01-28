@@ -12,7 +12,7 @@ defmodule CritistryWeb.PageController do
 
   def index(conn, _params) do
     conn = put_session(conn, :message, "new stuff we just set in the session")
-    render conn, "index.html"
+    render conn, "index.html", stats: %{user_count: Auth.get_user_count, crit_group_count: Crits.get_crit_group_count, crit_session_count: Crits.get_crit_session_count, crit_count: Crits.get_crit_count}
   end
 
   def sign_out(conn, _params) do

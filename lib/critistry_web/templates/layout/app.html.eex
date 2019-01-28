@@ -52,6 +52,31 @@
 
 		<%= render @view_module, @view_template, assigns %>
 
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<a href="/auth/facebook" class="btn btn-lg btn-block btn-social btn-facebook">
+							<i class="fab fa-facebook"></i> Sign in with Facebook
+						</a>
+						<a href="/auth/google" class="btn btn-lg btn-block btn-social btn-google">
+							<i class="fab fa-google"></i> Sign in with Google
+						</a>										
+					</div>
+					<div class="modal-footer">
+						
+					</div>
+				</div><!-- end modal-content -->
+			</div><!-- end modal-dialog -->
+		</div><!-- end modal -->
+		
+
 		<footer>
 			<div class="footer bg-dark-lighter">
 				<div class="container">
@@ -62,35 +87,16 @@
 						<div class="col-12 col-md-6 col-lg-3">
 							<h6 class="heading-uppercase">Useful Links</h6>
 							<ul class="list-icon list-icon-arrow">
-								<li><a href="#">About us</a></li>
-								<li><a href="#">Team</a></li>
-								<li><a href="#">Prices</a></li>
-								<li><a href="#">Contact</a></li>
+								<li><a href="/about">About us</a></li>
+								<li><a href="/faq">FAQ</a></li>																
 							</ul>
-						</div>
-						<div class="col-12 col-md-6 col-lg-3">
-							<h6 class="heading-uppercase">Additional Links</h6>
-							<ul class="list-icon list-icon-arrow">
-								<li><a href="#">Clients</a></li>
-								<li><a href="#">Process</a></li>
-								<li><a href="#">FAQ</a></li>
-								<li><a href="#">Careers</a></li>
-							</ul>
-						</div>
-						<div class="col-12 col-md-6 col-lg-3">
-							<h6 class="heading-uppercase">Contact Info</h6>
-							<ul class="list-unstyled">
-								<li>121 King St, Melbourne VIC 3000</li>
-								<li>example@email.com</li>
-								<li>+(123) 456 789 01</li>
-							</ul>
-						</div>
+						</div>				
 					</div><!-- end row -->
 				</div><!-- end container -->
 			</div><!-- end footer -->
 			<div class="footer-bottom bg-dark">
 				<div class="container text-center">
-					<p>&copy; 2018 FlaTheme, All Rights Reserved.</p>
+					<p>&copy; 2018 Critistry.com, All Rights Reserved.</p>
 				</div><!-- end container -->
 			</div><!-- end footer-bottom -->
 		</footer>

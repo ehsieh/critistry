@@ -1,1 +1,36 @@
-<h2>About Us</h2>
+<!-- Page header -->
+<header>
+  <div class="bg-image parallax" style="background-image: url(/images/background1.jpg)">
+    <div class="page-title-xs bg-black-07 text-center">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="<%= dashboard_path(@conn, :index) %>">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+          </ul>
+        </nav>
+      </div><!-- end container -->
+    </div><!-- end page-title -->
+  </div><!-- end bg-image -->
+  <!-- end Page header -->
+</header>
+
+<!-- About section -->
+		<div class="section">
+			<div class="container">
+				<div class="row align-items-center col-spacing-50">
+					<div class="col-12 col-lg-4">
+						<img src="/images/Catbert.png" alt=""><!-- Image source -->
+					</div>
+					<div class="col-12 col-lg-8">
+						<h6 class="heading-uppercase">Artist and Web Developer</h6>
+						<h3>Hello, I'm Eric</h3>
+						<p>I am a web developer by trade and an aspiring artist.  I love taking online art classes, but after awhile I realized as soon as my classes ended, I was left on my own to figure out how to progress and improve.  
+            I wanted some way to get feedback on my work and while there are some resoures online to share artwork and ask for feedback, I felt that there was still a lack of focus on how these resources functioned.  So I decided to start Critistry.com. 
+            I thank you for visiting this site and hope it proves useful in your artistic journey.  This site is still in active development and I have many exciting features planned.  If you have any suggestions or comments, please feel free to contanct me at <a href="mailto:critistry@gmail.com">critistry@gmail.com</a></p>
+					</div>
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</div>
+		<!-- end About section -->

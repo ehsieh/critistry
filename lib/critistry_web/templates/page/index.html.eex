@@ -12,8 +12,8 @@
 					<div class="container text-center">
 						<div class="row">
 							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-								<p class="lead margin-bottom-20">Please Welcome</p>
-								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>								
+								<p class="lead margin-bottom-20">Become a Better Artist</p>
+								<h3 class="uppercase letter-spacing-3px">Gain insightful feedback and develop your critical eye</h3>
                 <a class="button button-lg button-rounded button-reveal-right-white margin-top-30" data-toggle="modal" data-target="#loginModal" href="#"><i class="ti-arrow-right"></i><span>Join Now</span></a>
 							</div>
 						</div><!-- end row -->
@@ -26,8 +26,8 @@
 					<div class="container text-center">
 						<div class="row">
 							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-								<p class="lead margin-bottom-20">Please Welcome</p>
-								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
+								<p class="lead margin-bottom-20">Connect with Fellow Artists</p>
+								<h3 class="uppercase letter-spacing-3px">Make friends, share your work, grow together</h3>
 								<a class="button button-lg button-rounded button-reveal-right-white margin-top-30" data-toggle="modal" data-target="#loginModal" href="#"><i class="ti-arrow-right"></i><span>Join Now</span></a>
 							</div>
 						</div><!-- end row -->
@@ -40,8 +40,8 @@
 					<div class="container text-center">
 						<div class="row">
 							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-								<p class="lead margin-bottom-20">Please Welcome</p>
-								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
+								<p class="lead margin-bottom-20">Challenge Yourself</p>
+								<h3 class="uppercase letter-spacing-3px">Let your crit group drive you to produce and improve</h3>
 								<a class="button button-lg button-rounded button-reveal-right-white margin-top-30" data-toggle="modal" data-target="#loginModal" href="#"><i class="ti-arrow-right"></i><span>Join Now</span></a>
 							</div>
 						</div><!-- end row -->
@@ -54,8 +54,8 @@
 					<div class="container text-center">
 						<div class="row">
 							<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-								<p class="lead margin-bottom-20">Please Welcome</p>
-								<h1 class="uppercase letter-spacing-3px">Business Clean 2</h1>
+								<p class="lead margin-bottom-20">See the World</p>
+								<h3 class="uppercase letter-spacing-3px">Don't let your location limit your growth</h3>
 								<a class="button button-lg button-rounded button-reveal-right-white margin-top-30" data-toggle="modal" data-target="#loginModal" href="#"><i class="ti-arrow-right"></i><span>Join Now</span></a>
 
 							</div>
@@ -63,31 +63,7 @@
 					</div><!-- end container -->
 				</div>
 			</div>
-		</div><!-- end owl-carousel -->
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<a href="/auth/facebook" class="btn btn-lg btn-block btn-social btn-facebook">
-							<i class="fab fa-facebook"></i> Sign in with Facebook
-						</a>
-						<a href="/auth/google" class="btn btn-lg btn-block btn-social btn-google">
-							<i class="fab fa-google"></i> Sign in with Google
-						</a>										
-					</div>
-					<div class="modal-footer">
-						
-					</div>
-				</div><!-- end modal-content -->
-			</div><!-- end modal-dialog -->
-		</div><!-- end modal -->
-		
+		</div><!-- end owl-carousel -->    
 		<!-- Process section -->
 		<div class="section bg-grey-lighter">
 			<div class="container">
@@ -96,7 +72,7 @@
 					<div class="col-12 col-lg-4">
 						<div class="clearfix">
 							<h1 class="font-weight-light float-left margin-right-20">1</h1>
-							<span class="d-block font-small font-weight-normal text-dark">Crit Group</span>
+							<span class="d-block font-small font-weight-normal text-dark">Crit Groups</span>
 							<h5 class="font-weight-normal line-height-120">Create or Join</h5>
 						</div>
 						<p>Create or join a Crit Group to connect with fellow artists.  Crit groups are categorized by subject/medium. </p>
@@ -105,19 +81,19 @@
 					<div class="col-12 col-lg-4">
 						<div class="clearfix">
 							<h1 class="font-weight-light float-left margin-right-20">2</h1>
-							<span class="d-block font-small font-weight-normal text-dark">Crit Session</span>
+							<span class="d-block font-small font-weight-normal text-dark">Crit Sessions</span>
 							<h5 class="font-weight-normal line-height-120">Post your Artwork</h5>
 						</div>
-						<p>Post your artwork as a Crit Session to the group to request for feedback.  Only members of your Crit Group can provide feedback on your work.</p>
+						<p>Post your artwork as a Crit Session to the group to request for feedback.  Gain valuable insight from your fellow artists.</p>
 					</div>
 					<!-- 3 -->
 					<div class="col-12 col-lg-4">
 						<div class="clearfix">
 							<h1 class="font-weight-light float-left margin-right-20">3</h1>
-							<span class="d-block font-small font-weight-normal text-dark">Crit</span>
+							<span class="d-block font-small font-weight-normal text-dark">Crits</span>
 							<h5 class="font-weight-normal line-height-120">Give/Receive Feedack</h5>
 						</div>
-						<p>Give and receive feedback as Crits.  Our intuitive Crit editor makes it easy to enter feedback and comments.</p>
+						<p>Give and receive feedback as Crits.  Develop your critical eye.</p>
 					</div>
 				</div><!-- end row -->
 			</div><!-- end container -->
@@ -129,11 +105,11 @@
 			<div class="container">
 				<div class="row align-items-center col-spacing-50">
 					<div class="col-12 col-lg-6">
-						<img src="../images/col-1.jpg" alt="">
+						<img src="../images/spotlight.jpg" alt="">
 					</div>
 					<div class="col-12 col-lg-6">
-						<h3 class="font-weight-light margin-bottom-20">We believe that teamwork divides the tasks and multiplies the success</h3>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<h3 class="font-weight-light margin-bottom-20">The artistic journey is tough, don't go at it alone</h3>
+						<p>Whether your a beginner or a seasoned pro, artists of all levels can benefit by joining a critique group.  Connect with fellow artists, share your work and grow as a group.  We believe that the road to artisitc mastery is long and arduous.  Let's join forces and make the journy together!</p>
 						<a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="#"><i class="ti-arrow-right"></i><span>Learn More</span></a>
 					</div>
 				</div>
@@ -142,174 +118,34 @@
 		<!-- end About section -->
 
 		<!-- Facts section -->
-		<div class="section bg-image parallax" style="background-image: url('../images/background.jpg')">
+		<div class="section bg-image parallax" style="background-image: url('../images/background1.jpg')">
 			<div class="bg-black-05">
 				<div class="container text-center">
 					<div class="row facts-wrapper">
 						<!-- Facts box 1 -->
 						<div class="col-12 col-md-3">
-							<h1 class="display-4 font-weight-thin facts-counter">100</h1>
-							<span class="heading-uppercase text-white">Fact One</span>
+							<h1 class="display-4 font-weight-thin facts-counter"><%=@stats.user_count%></h1>
+							<span class="heading-uppercase text-white">Artists Joined</span>
 						</div>
 						<!-- Facts box 2 -->
 						<div class="col-12 col-md-3">
-							<h1 class="display-4 font-weight-thin facts-counter">100</h1>
-							<span class="heading-uppercase text-white">Fact Two</span>
+							<h1 class="display-4 font-weight-thin facts-counter"><%=@stats.crit_group_count%></h1>
+							<span class="heading-uppercase text-white">Crit Groups</span>
 						</div>
 						<!-- Facts box 3 -->
 						<div class="col-12 col-md-3">
-							<h1 class="display-4 font-weight-thin facts-counter">100</h1>
-							<span class="heading-uppercase text-white">Fact Three</span>
+							<h1 class="display-4 font-weight-thin facts-counter"><%=@stats.crit_session_count%></h1>
+							<span class="heading-uppercase text-white">Crit Sessions</span>
 						</div>
 						<!-- Facts box 4 -->
 						<div class="col-12 col-md-3">
-							<h1 class="display-4 font-weight-thin facts-counter">100</h1>
-							<span class="heading-uppercase text-white">Fact Four</span>
+							<h1 class="display-4 font-weight-thin facts-counter"><%=@stats.crit_count%></h1>
+							<span class="heading-uppercase text-white">Crits</span>
 						</div>
 					</div><!-- end row -->
 				</div><!-- end container -->
 			</div>
 		</div>
-		<!-- end Facts section -->
+		<!-- end Facts section -->	
 
-		<!-- Services section -->
-		<div class="section">
-			<div class="container">
-				<div class="section-title text-center">
-					<h6 class="heading-uppercase">Services</h6>
-					<h2>What We Do</h2>
-				</div>
-				<div class="row text-center">
-					<!-- Icon text box 1 -->
-					<div class="col-12 col-md-4 icon-5xl">
-						<i class="ti-star text-dark"></i>
-						<h6 class="heading-uppercase margin-top-20">Social Marketing</h6>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-					</div>
-					<!-- Icon text box 2 -->
-					<div class="col-12 col-md-4 icon-5xl">
-						<i class="ti-ruler-pencil text-dark"></i>
-						<h6 class="heading-uppercase margin-top-20">Graphic Design</h6>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-					</div>
-					<!-- Icon text box 3 -->
-					<div class="col-12 col-md-4 icon-5xl">
-						<i class="ti-camera text-dark"></i>
-						<h6 class="heading-uppercase margin-top-20">Photography</h6>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-					</div>
-				</div><!-- end row -->
-				<div class="text-center margin-top-70">
-					<a class="button button-lg button-reveal-right-dark button-rounded" href="#"><i class="ti-email"></i><span>Contact Us</span></a>
-				</div>
-			</div><!-- end container -->
-		</div>
-		<!-- end Services section -->
-
-		<!-- Clients section -->
-		<div class="section bg-grey">
-			<div class="container">
-				<div class="owl-carousel" data-owl-dots="false" data-owl-margin="30" data-owl-autoplay="true" data-owl-xs="1" data-owl-sm="2" data-owl-md="3" data-owl-lg="4" data-owl-xl="6">
-					<!-- Client box 1 -->
-					<div class="client-box">
-						<a href="#">
-							<img src="../images/col-5.jpg" alt="">
-						</a>
-					</div>
-					<!-- Client box 2 -->
-					<div class="client-box">
-						<a href="#">
-							<img src="../images/col-5.jpg" alt="">
-						</a>
-					</div>
-					<!-- Client box 3 -->
-					<div class="client-box">
-						<a href="#">
-							<img src="../images/col-5.jpg" alt="">
-						</a>
-					</div>
-					<!-- Client box 4 -->
-					<div class="client-box">
-						<a href="#">
-							<img src="../images/col-5.jpg" alt="">
-						</a>
-					</div>
-					<!-- Client box 5 -->
-					<div class="client-box">
-						<a href="#">
-							<img src="../images/col-5.jpg" alt="">
-						</a>
-					</div>
-					<!-- Client box 6 -->
-					<div class="client-box">
-						<a href="#">
-							<img src="../images/col-5.jpg" alt="">
-						</a>
-					</div>
-					<!-- Client box 7 -->
-					<div class="client-box">
-						<a href="#">
-							<img src="../images/col-5.jpg" alt="">
-						</a>
-					</div>
-				</div><!-- end owl-carousel -->
-			</div><!-- end container -->
-		</div>
-		<!-- end Clients section -->
-
-		<!-- Testimonial section -->
-		<div class="section">
-			<div class="container">
-				<div class="section-title text-center">
-					<h6 class="heading-uppercase">Testimonial</h6>
-					<h2>What People Say</h2>
-				</div>
-				<div class="testimonial-grid column-2">
-					<!-- 1 -->
-					<div class="testimonial-grid-box">
-						<div class="testimonial-img">
-							<img src="../images/img-circle-small.jpg" alt="">
-						</div>
-						<div class="testimonial-content">
-							<p class="margin-bottom-10 font-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-							<h5 class="font-weight-normal no-margin">Emiley Haley</h5>
-							<span class="font-small font-weight-normal">Manager - Mono</span>
-						</div>
-					</div>
-					<!-- 2 -->
-					<div class="testimonial-grid-box">
-						<div class="testimonial-img">
-							<img src="../images/img-circle-small.jpg" alt="">
-						</div>
-						<div class="testimonial-content">
-							<p class="margin-bottom-10 font-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-							<h5 class="font-weight-normal no-margin">Andrew Palmer</h5>
-							<span class="font-small font-weight-normal">Developer - Mono</span>
-						</div>
-					</div>
-					<!-- 3 -->
-					<div class="testimonial-grid-box">
-						<div class="testimonial-img">
-							<img src="../images/img-circle-small.jpg" alt="">
-						</div>
-						<div class="testimonial-content">
-							<p class="margin-bottom-10 font-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-							<h5 class="font-weight-normal no-margin">Anna Mullen</h5>
-							<span class="font-small font-weight-normal">Designer - Mono</span>
-						</div>
-					</div>
-					<!-- 4 -->
-					<div class="testimonial-grid-box">
-						<div class="testimonial-img">
-							<img src="../images/img-circle-small.jpg" alt="">
-						</div>
-						<div class="testimonial-content">
-							<p class="margin-bottom-10 font-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-							<h5 class="font-weight-normal no-margin">John Smith</h5>
-							<span class="font-small font-weight-normal">Marketer - Mono</span>
-						</div>
-					</div>
-				</div><!-- end testimonial-grid -->
-			</div><!-- end row -->
-		</div>
-		<!-- end Testimonial section -->
+		

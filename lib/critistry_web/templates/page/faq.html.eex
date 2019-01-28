@@ -1,1 +1,47 @@
-<h2>FAQ Page</h2>
+<!-- Page header -->
+<header>
+  <div class="bg-image parallax" style="background-image: url(/images/background1.jpg)">
+    <div class="page-title-xs bg-black-07 text-center">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="<%= dashboard_path(@conn, :index) %>">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+          </ul>
+        </nav>
+      </div><!-- end container -->
+    </div><!-- end page-title -->
+  </div><!-- end bg-image -->
+  <!-- end Page header -->
+</header>
+
+<div class="section">
+			<div class="container">
+				<div class="section-title text-center">
+					<h3>Frequently Asked Questions</h3>
+				</div>
+				<div class="row">
+					<div class="col-12 col-md-6 col-lg-4">
+						<h5>Is this site free to use?</h5>
+						<p>Yes! We want artists of all levels to be able to benefit from joining a critique group.</p>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<h5>The site seems very minimal, is this intended?</h5>
+						<p>We wanted a minimalist site design to not detract from our users' artwork</p>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<h5>Will there be more features in the future?</h5>
+						<p>Definitely!  This site is in active development and we will contiue to expand the functionality.  If you're interested to see what we're up to, check out out <a href="https://trello.com/b/pVLZWkXN/critistry">Trello board</a>.</p>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<h5>Is there a limit to how many crit groups I can join?</h5>
+						<p>Not at this moment.  We encourage you to join as many as you'd like.  However, we suggest you only join a group if you intend to submit artwork for crit sessions regularly.</p>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<h5>The crit editor is very basic, are there plans to improve it?</h5>
+						<p>Yes, we have many planned features we'd like to add to the crit editor.  Things such as draw over annotations and commenting just to name a few.  Please stay tuned.</p>
+					</div>					
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</div>

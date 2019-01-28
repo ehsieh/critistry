@@ -1,19 +1,19 @@
 <!-- Page header -->
 <header>
-	<div class="bg-image parallax" style="background-image: url(/images/background1.jpg)">
-		<div class="page-title-xs bg-black-07 text-center">
-			<div class="container">
-				<nav aria-label="breadcrumb">
-					<ul class="breadcrumb">
-						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Profile</li>
-					</ul>
-				</nav>
-			</div><!-- end container -->
-		</div><!-- end page-title -->
-	</div><!-- end bg-image -->
-	<!-- end Page header -->
+  <div class="bg-image parallax" style="background-image: url(/images/background1.jpg)">
+    <div class="page-title-xs bg-black-07 text-center">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="<%= dashboard_path(@conn, :index) %>">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Profile</li>
+          </ul>
+        </nav>
+      </div><!-- end container -->
+    </div><!-- end page-title -->
+  </div><!-- end bg-image -->
+  <!-- end Page header -->
 </header>
 
 <div class="section">
@@ -68,22 +68,22 @@
 		<div class="row facts-wrapper text-center">
 			<!-- Fact box 1 -->
 			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-				<h2 class="font-weight-light facts-counter">100</h2>
+				<h2 class="font-weight-light facts-counter">0</h2>
 				<h6 class="heading-uppercase">Days a Member</h6>
 			</div>
 			<!-- Fact box 2 -->
 			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-				<h2 class="font-weight-light facts-counter">100</h2>
+				<h2 class="font-weight-light facts-counter">0</h2>
 				<h6 class="heading-uppercase">Crit Sessions</h6>
 			</div>
 			<!-- Fact box 3 -->
 			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-				<h2 class="font-weight-light facts-counter">100</h2>
+				<h2 class="font-weight-light facts-counter">0</h2>
 				<h6 class="heading-uppercase">Crits Recieved</h6>
 			</div>					
 			<!-- Fact box 4 -->
 			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-				<h2 class="font-weight-light facts-counter">100</h2>
+				<h2 class="font-weight-light facts-counter">0</h2>
 				<h6 class="heading-uppercase">Crits Given</h6>
 			</div>	
 		</div><!-- end row -->

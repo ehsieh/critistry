@@ -1,4 +1,19 @@
-
+<!-- Page header -->
+<header>
+  <div class="bg-image parallax" style="background-image: url(/images/background1.jpg)">
+    <div class="page-title-xs bg-black-07 text-center">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="<%= dashboard_path(@conn, :index) %>">Dashboard</a></li>            
+          </ul>
+        </nav>
+      </div><!-- end container -->
+    </div><!-- end page-title -->
+  </div><!-- end bg-image -->
+  <!-- end Page header -->
+</header>
 
 <!-- Products Slider -->
 <div class="section border-top">

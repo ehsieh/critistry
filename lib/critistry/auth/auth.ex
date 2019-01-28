@@ -54,4 +54,8 @@ defmodule Critistry.Auth do
     |> User.changeset(attrs)
     |> Repo.update()
   end
+
+  def get_user_count do
+    Repo.one(from u in User, select: count(u.id))
+  end
 end
