@@ -16,7 +16,7 @@ defmodule Critistry.Auth do
     user
     |> Repo.preload(:crit_groups)
   end
-
+ 
   def list_users() do
     Repo.all(User)
   end

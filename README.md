@@ -8,3 +8,7 @@ Critistry.com is a website for artists of all levels to connect and form online 
   * GraphQL with Absinthe
   * Apollo Client
   * React  
+
+Site: [www.critistry.com](http://www.critistry.com)
+GraphQL: [www.critistry.com/graphiql](http://www.critistry.com/graphiql)
+Trello: [https://trello.com/b/pVLZWkXN/critistry](https://trello.com/b/pVLZWkXN/critistry)

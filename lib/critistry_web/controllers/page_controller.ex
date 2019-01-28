@@ -24,7 +24,7 @@ defmodule CritistryWeb.PageController do
   def about(conn, _params) do
     render conn, "about.html"
   end
-
+ 
   def contact(conn, _params) do
     render conn, "contact.html"
   end
