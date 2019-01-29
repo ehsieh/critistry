@@ -7,7 +7,7 @@ defmodule CritistryWeb.AuthController do
       
       info = Map.from_struct(auth.info)
       |> Map.put_new(:avatar, auth.info.image)
-      |> Map.put_new(:user_name, auth.info.first_name <> " " <> auth.info.last_name)
+      #|> Map.put_new(:user_name, auth.info.first_name <> " " <> auth.info.last_name)
 
       user = Auth.find_or_create_user(info)
       
