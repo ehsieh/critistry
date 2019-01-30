@@ -33,9 +33,9 @@ defmodule CritistryWeb.DashboardController do
     end
   end
 
-  def update_my_profile(conn, %{"user" => %{"image" => user_image} = user_params}, user) do            
+  def update_my_profile(conn, %{"user" => %{"avatar" => user_image} = user_params}, user) do            
     conn
-    |> update_user(user, %{user_params | "image" => Upload.upload_image(user_image)})
+    |> update_user(user, %{user_params | "avatar" => Upload.upload_image(user_image)})
   end
 
   def update_my_profile(conn, %{"user" => user_params}, user) do    
