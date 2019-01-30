@@ -39,10 +39,9 @@
               <li class="nav-item nav-dropdown">
 							<a class="nav-link" href="<%= dashboard_path(@conn, :index) %>">Dashboard</a>
 				        	<ul class="dropdown-menu">
-								<li><a href="<%= dashboard_path(@conn, :my_profile) %>">Profile</a></li>
-								<li><a href="#">My Crit Sessions</a></li>
-								<li><a href="#">My Crit Requests</a></li>
-								<li><a href="#">Crit Groups</a></li>
+								<li><a href="<%= dashboard_path(@conn, :my_profile) %>">Profile</a></li>								
+                <li><a href="<%= crit_group_path(@conn, :new) %>">Create Crit Group</a></li>
+								<li><a href="<%= crit_group_path(@conn, :list) %>">Crit Groups</a></li>
 							</ul>
 						</li>														
             <% else %>

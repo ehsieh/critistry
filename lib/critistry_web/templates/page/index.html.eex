@@ -110,7 +110,7 @@
 					<div class="col-12 col-lg-6">
 						<h3 class="font-weight-light margin-bottom-20">The artistic journey is tough, don't go at it alone</h3>
 						<p>Whether your a beginner or a seasoned pro, artists of all levels can benefit by joining a critique group.  Connect with fellow artists, share your work and grow as a group.  We believe that the road to artisitc mastery is long and arduous.  Let's join forces and make the journy together!</p>
-						<a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="#"><i class="ti-arrow-right"></i><span>Learn More</span></a>
+						<a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" data-toggle="modal" data-target="#loginModal" href="#"><i class="ti-arrow-right"></i><span>Join Now</span></a>
 					</div>
 				</div>
 			</div><!-- end container -->
