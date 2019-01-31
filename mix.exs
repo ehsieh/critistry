@@ -27,7 +27,8 @@ defmodule Critistry.Mixfile do
         :ueberauth,
         :ueberauth_google,
         :ueberauth_facebook,
-        :absinthe_plug
+        :absinthe_plug,
+        :scrivener_ecto
       ]
     ]
   end
@@ -63,7 +64,10 @@ defmodule Critistry.Mixfile do
       {:uuid, "~> 1.1" },
       {:absinthe, "~> 1.4.0"},
       {:absinthe_plug, "~> 1.4.0"},
-      {:dataloader, "~> 1.0.0"}
+      {:dataloader, "~> 1.0.0"},
+      {:scrivener_ecto, "~> 2.0"},
+      {:ecto_sql, "~> 3.0-rc.1"},
+      {:plug_cowboy, "~> 1.0"}
     ]
   end
 

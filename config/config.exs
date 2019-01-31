@@ -53,3 +53,8 @@ s3: [
  host: "critistry-uploads.s3.amazonaws.com", 
  region: "us-west-1" 
 ]
+
+config :scrivener_html,
+  routes_helper: CritistryWeb.Router.Helpers,
+  # If you use a single view style everywhere, you can configure it here. See View Styles below for more info.
+  view_style: :bootstrap

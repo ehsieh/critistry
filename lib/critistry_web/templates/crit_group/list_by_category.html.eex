@@ -22,30 +22,39 @@
     <div class="row col-spacing-50">
       <!-- Blog Posts -->
       <div class="col-12 col-lg-8 blog-small-thumbnail">
-      <%= for {id, image, name, description} <- @crit_groups do %>
+      <%= for crit_group <- @crit_groups do %>
         <div class="blog-post-box">
           <div class="blog-post-img">
-            <a href="<%= crit_group_path(@conn, :show, id) %>">
-              <img src="<%=image%>" alt="">
+            <a href="<%= crit_group_path(@conn, :show, crit_group.id) %>">
+              <img src="<%=crit_group.image%>" alt="">
             </a>
           </div>
           <div class="blog-post-content">
             <div class="blog-post-title margin-bottom-10">              
-              <h5><a href="<%= crit_group_path(@conn, :show, id) %>"><%=name%></a></h5>
+              <h5><a href="<%= crit_group_path(@conn, :show, crit_group.id) %>"><%=crit_group.name%></a></h5>
             </div>
-            <p><%=description%></p>
-            <a class="text-btn-3 margin-top-20" href="<%= crit_group_path(@conn, :show, id) %>">Details</a>
+            <p><%=crit_group.description%></p>
+            <a class="text-btn-3 margin-top-20" href="<%= crit_group_path(@conn, :show, crit_group.id) %>">Details</a>
           </div>
         </div>
       <% end %>        
-        <!-- Pagination -->
+        <!-- Pagination -->        
         <nav>
           <ul class="pagination justify-content-center margin-top-70">
-            <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+            <%= if (@page.page_number > 1) do %>
+              <li class="page-item"><a class="page-link" href="<%= crit_group_path(@conn, :list_by_category, @category_id, page: @page.page_number - 1) %>">&laquo;</a></li>
+            <%= end %>
+            <%= for i <- 1..@page.total_pages do %>
+              <%= if (i == @page.page_number) do %>
+                <li class="page-item active">
+              <% else %>
+                <li class="page-item">
+              <% end %>
+                <a class="page-link" href="<%= crit_group_path(@conn, :list_by_category, @category_id, page: i) %>"><%= i %></a></li>
+            <% end %>            
+            <%= if (@page.page_number < @page.total_pages) do %>
+              <li class="page-item"><a class="page-link" href="<%= crit_group_path(@conn, :list_by_category, @category_id, page: @page.page_number + 1) %>">&raquo;</a></li>
+            <%= end %>
           </ul>
         </nav>
       </div>

@@ -40,6 +40,9 @@
       <% end %>                
     </div><!-- end owl-carousel -->
     <div class="text-center">
+      <%= if (@user.crit_groups == []) do %>
+      You haven't joined any crit groups.  You can create a new crit group or find an join an existing crit group using the buttons below.
+      <% end %>
       <a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="<%= crit_group_path(@conn, :new) %>">
         <i class="ti-arrow-right"></i>
         <span>New Crit Group</span>
@@ -54,6 +57,7 @@
 </div>
 <!-- end Products Slider -->
 
+<%= if (@crit_sessions != []) do %>
 <!-- Products Slider -->
 <div class="section border-top">
   <div class="container">
@@ -81,3 +85,4 @@
   </div><!-- end container -->
 </div>
 <!-- end Products Slider -->
+<% end %>

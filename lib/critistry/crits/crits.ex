@@ -26,8 +26,12 @@ defmodule Critistry.Crits do
     |> Repo.preload(:categories)
   end
 
-  def list_crit_groups do
+  def list_crit_groups() do
     Repo.all(CritGroup)
+  end
+
+  def list_crit_groups(params) do
+    Repo.paginate(CritGroup, params)
   end
 
   def join_crit_group(crit_group, user) do
@@ -83,14 +87,16 @@ defmodule Critistry.Crits do
     |> Repo.update()
   end
 
-  def list_crit_groups_by_category(category_id) do
-    query = from c in "crit_groups_categories",
-    join: cg in CritGroup,
-    on: cg.id == c.crit_group_id,
-    where: c.category_id == ^category_id,
-    select: {cg.id, cg.image, cg.name, cg.description},
-    order_by: cg.name
-    Repo.all(query)
+  def list_crit_groups_by_category(category_id, params) do
+    category = Repo.get Category, category_id
+    Repo.paginate(Ecto.assoc(category, :crit_groups), params)
+    #query = from c in "crit_groups_categories",
+    #join: cg in CritGroup,
+    #on: cg.id == c.crit_group_id,
+    #where: c.category_id == ^category_id,
+    #select: {cg.id, cg.image, cg.name, cg.description},
+    #order_by: cg.name
+    #Repo.paginate(query, params)
   end
 
   def crit_group_member?(crit_group, user) do

@@ -38,14 +38,23 @@
           </div>
         </div>
       <% end %>        
-        <!-- Pagination -->
+        <!-- Pagination -->        
         <nav>
           <ul class="pagination justify-content-center margin-top-70">
-            <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+            <%= if (@page.page_number > 1) do %>
+              <li class="page-item"><a class="page-link" href="<%= crit_group_path(@conn, :list, page: @page.page_number - 1) %>">&laquo;</a></li>
+            <%= end %>
+            <%= for i <- 1..@page.total_pages do %>
+              <%= if (i == @page.page_number) do %>
+                <li class="page-item active">
+              <% else %>
+                <li class="page-item">
+              <% end %>
+                <a class="page-link" href="<%= crit_group_path(@conn, :list, page: i) %>"><%= i %></a></li>
+            <% end %>            
+            <%= if (@page.page_number < @page.total_pages) do %>
+              <li class="page-item"><a class="page-link" href="<%= crit_group_path(@conn, :list, page: @page.page_number + 1) %>">&raquo;</a></li>
+            <%= end %>
           </ul>
         </nav>
       </div>

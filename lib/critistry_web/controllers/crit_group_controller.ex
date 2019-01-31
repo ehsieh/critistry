@@ -10,16 +10,17 @@ defmodule CritistryWeb.CritGroupController do
     apply(__MODULE__, action_name(conn), args)
   end
 
-  def list(conn, _params, user) do
-    crit_groups = Crits.list_crit_groups
+  def list(conn, params, user) do
+    page = Crits.list_crit_groups params
     categories = Crits.get_category_counts
-    render conn, "list.html", crit_groups: crit_groups, categories: categories
+    render conn, "list.html", crit_groups: page.entries, categories: categories, page: page
   end
 
-  def list_by_category(conn, %{"id" => id}, user) do
-    crit_groups = Crits.list_crit_groups_by_category String.to_integer(id)
+  def list_by_category(conn, %{"id" => id} = params, user) do
+    page = Crits.list_crit_groups_by_category String.to_integer(id), params
     categories = Crits.get_category_counts
-    render conn, "list_by_category.html", crit_groups: crit_groups, categories: categories
+    IO.inspect page
+    render conn, "list_by_category.html", crit_groups: page.entries, categories: categories, page: page, category_id: id
   end
 
   def new(conn, _params, user) do
