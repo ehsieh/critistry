@@ -31,8 +31,8 @@
                             <p>Oops, something went wrong! Please check the errors below.</p>
                         </div>
                         <% end %>           
-                                
-                        <%= label f, :text, class: "required" %>
+                        <img src="<%=@crit_session.image%>" alt="">        
+                        <%= label f, :text, "Your Crit", class: "required" %>
                         <%= error_tag f, :text %>   
                         <%= textarea f, :text %>                         
                                     
