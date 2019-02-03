@@ -70,6 +70,7 @@ defmodule CritistryWeb.Router do
   scope "/auth", CritistryWeb do
     pipe_through :browser
 
+    get "/guest", AuthController, :guest
     get "/:provider", AuthController, :request
     get "/:provider/callback", AuthController, :callback
   end

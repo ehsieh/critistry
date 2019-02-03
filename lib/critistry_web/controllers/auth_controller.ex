@@ -16,4 +16,10 @@ defmodule CritistryWeb.AuthController do
       |> redirect(to: CritistryWeb.Router.Helpers.dashboard_path(conn, :index))
     end
 
+    def guest(conn, _params) do
+      id = :rand.uniform(20)
+      conn
+      |> Critistry.Auth.Guardian.Plug.sign_in("email-#{id}@example.com", %{})
+      |> redirect(to: CritistryWeb.Router.Helpers.dashboard_path(conn, :index))
+    end
   end
