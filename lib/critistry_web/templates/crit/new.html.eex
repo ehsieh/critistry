@@ -18,6 +18,34 @@
     <!-- end Page header -->
 </header>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.4.6/fabric.min.js"></script>
+<script>
+    var canvas;
+    function onImageLoad(img) {      
+      var context = document.getElementById('layer1').getContext("2d");
+      var context2 = document.getElementById('layer2').getContext("2d");
+      context.canvas.width  = img.width;
+      context.canvas.height = img.height;
+      context2.canvas.width  = img.width;
+      context2.canvas.height = img.height;
+      context.drawImage(img, 0, 0, img.width, img.height);
+      img.style.display = "none"
+      canvas = new fabric.Canvas('layer2', {
+            isDrawingMode: true
+      });
+      document.getElementById("brushColor").oninput = function() {
+            canvas.freeDrawingBrush.color = this.value;                    
+        };
+        document.getElementById("brushSize").oninput = function() {
+            canvas.freeDrawingBrush.width = this.value;                    
+        };
+        document.getElementById("btnClear").onclick = function() {
+            canvas.clear();                   
+        };
+    }
+    
+</script>
+
 <!-- About section -->
 <div class="section">
     <div class="container">
@@ -31,7 +59,7 @@
                             <p>Oops, something went wrong! Please check the errors below.</p>
                         </div>
                         <% end %>           
-                        <img id="image" src="<%=@crit_session.image%>" alt="">
+                        <img id="image" onload="onImageLoad(this)" src="<%=@crit_session.image%>" alt="">
                         <canvas id="layer1" style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
                         <canvas id="layer2" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
                         <div>
@@ -61,44 +89,6 @@
     </div><!-- end container -->
 </div>
 <!-- end About section -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.4.6/fabric.min.js"></script>
-<script>
-    var canvas;
-    (function() {                
-                        
-        var context = document.getElementById('layer1').getContext("2d");
-        var context2 = document.getElementById('layer2').getContext("2d");
-        var img = document.getElementById('image');
-        context.canvas.width  = img.width;
-        context.canvas.height = img.height;
-        context2.canvas.width  = img.width;
-        context2.canvas.height = img.height;
-        context.drawImage(img, 0, 0, img.width, img.height);
-        img.style.display = "none"
-        canvas = new fabric.Canvas('layer2', {
-            isDrawingMode: true
-        });
-        /*
-        var img = new Image();
-        img.onload = function () {          
-            context.canvas.width  = img.width;
-            context.canvas.height = img.height;
-            context2.canvas.width  = img.width;
-            context2.canvas.height = img.height;
-            context.drawImage(img, 0, 0);
-        }
-        img.src = "<%=@crit_session.image%>";*/
 
-        document.getElementById("brushColor").oninput = function() {
-            canvas.freeDrawingBrush.color = this.value;                    
-        };
-        document.getElementById("brushSize").oninput = function() {
-            canvas.freeDrawingBrush.width = this.value;                    
-        };
-        document.getElementById("btnClear").onclick = function() {
-            canvas.clear();                   
-        };
-    })();
-</script>
 	
 
