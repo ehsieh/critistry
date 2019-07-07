@@ -1,12 +1,12 @@
 defmodule CritistryWeb.Resolvers.Auth do
   import Ecto.Query, warn: false
-
+  
+  alias Critistry.Auth
   alias Critistry.Repo
-  alias Critistry.Auth.User
 
   def user(_, %{id: id}, _) do
     IO.puts "########## Resolvers.Auth.user"
-    {:ok, Repo.get!(User, id)}
+    {:ok, Auth.get_user!(id)}
   end
 
   def admin_user(crit_group, _, _) do
@@ -21,6 +21,6 @@ defmodule CritistryWeb.Resolvers.Auth do
 
   def users(_, _, _) do
     IO.puts "########## Resolvers.Auth.users"
-    {:ok, Repo.all(User)}
+    {:ok, Auth.list_users()}
   end
 end

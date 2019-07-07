@@ -1,37 +1,36 @@
 defmodule CritistryWeb.Resolvers.Crits do
   import Ecto.Query, warn: false
 
-  alias Critistry.Crits.{CritGroup, CritSession, Crit}
-  alias Critistry.Repo
+  alias Critistry.Crits  
 
   def crit_group(_, %{id: id}, _) do
     IO.puts "########## Resolvers.Crits.crit_group"
-    {:ok, Repo.get!(CritGroup, id)}
+    {:ok, Crits.get_crit_group!(id)}
   end
 
   def crit_groups(_, _, _) do
     IO.puts "########## Resolvers.Crits.crit_groups"
-    {:ok, Repo.all(CritGroup)}
+    {:ok, Crits.list_crit_groups()}
   end  
 
   def crit_session(_, %{id: id}, _) do
     IO.puts "########## Resolvers.Crits.crit_session"
-    {:ok, Repo.get!(CritSession, id)}
+    {:ok, Crits.get_crit_session!(id)}
   end
 
   def crit_sessions(_, _, _) do
     IO.puts "########## Resolvers.Crits.crit_sessions"
-    {:ok, Repo.all(CritSession)}
+    {:ok, Crits.list_crit_sessions()}
   end
 
   def crit(_, %{id: id}, _) do
     IO.puts "########## Resolvers.Crits.crit"
-    {:ok, Repo.get!(Crit, id)}
+    {:ok, Crits.get_crit!(id)}
   end
 
   def crits(_, _, _) do
     IO.puts "########## esolvers.Crits.crits"
-    {:ok, Repo.all(Crit)}
+    {:ok, Crits.list_crits()}
   end
 
 end
