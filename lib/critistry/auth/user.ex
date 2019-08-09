@@ -2,15 +2,14 @@ defmodule Critistry.Auth.User do
   use Ecto.Schema
   import Ecto.Changeset
 
-
   schema "users" do
-    field :avatar, :string
-    field :email, :string    
-    field :user_name, :string
-    field :first_name, :string
-    field :last_name, :string
-    field :bio, :string
-    many_to_many :crit_groups, Critistry.Crits.CritGroup, join_through: "users_crit_groups"
+    field(:avatar, :string)
+    field(:email, :string)
+    field(:user_name, :string)
+    field(:first_name, :string)
+    field(:last_name, :string)
+    field(:bio, :string)
+    many_to_many(:crit_groups, Critistry.Crits.CritGroup, join_through: "users_crit_groups")
 
     timestamps(type: :utc_datetime)
   end

@@ -1,6 +1,6 @@
 defmodule CritistryWeb.CritGroupView do
-  use CritistryWeb, :view  
-  
+  use CritistryWeb, :view
+
   alias Critistry.Crits
 
   def member?(crit_group, user) do

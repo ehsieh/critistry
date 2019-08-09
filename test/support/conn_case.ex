@@ -26,13 +26,13 @@ defmodule CritistryWeb.ConnCase do
     end
   end
 
-
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Critistry.Repo)
+
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(Critistry.Repo, {:shared, self()})
     end
+
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
-
 end

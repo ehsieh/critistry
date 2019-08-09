@@ -25,13 +25,13 @@ defmodule CritistryWeb.ChannelCase do
     end
   end
 
-
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Critistry.Repo)
+
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(Critistry.Repo, {:shared, self()})
     end
+
     :ok
   end
-
 end

@@ -3,11 +3,11 @@ defmodule CritistryWeb.LayoutView do
 
   def is_logged_in?(conn) do
     conn
-    |> Critistry.Auth.Guardian.Plug.authenticated?
+    |> Critistry.Auth.Guardian.Plug.authenticated?()
   end
-  
+
   def current_user(conn) do
     conn
-    |> Critistry.Auth.Guardian.Plug.current_resource
-  end  
+    |> Critistry.Auth.Guardian.Plug.current_resource()
+  end
 end

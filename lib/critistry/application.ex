@@ -11,7 +11,7 @@ defmodule Critistry.Application do
       # Start the Ecto repository
       supervisor(Critistry.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(CritistryWeb.Endpoint, []),
+      supervisor(CritistryWeb.Endpoint, [])
       # Start your own worker by calling: Critistry.Worker.start_link(arg1, arg2, arg3)
       # worker(Critistry.Worker, [arg1, arg2, arg3]),
     ]
