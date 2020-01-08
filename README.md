@@ -11,6 +11,4 @@ Critistry.com is a website for artists of all levels to connect and form online 
 
 Site: [www.critistry.com](http://www.critistry.com)
 
-GraphQL: [www.critistry.com/graphiql](http://www.critistry.com/graphiql)
-
-Trello: [https://trello.com/b/pVLZWkXN/critistry](https://trello.com/b/pVLZWkXN/critistry)
+This prototype repo has been replaced by a new implementation with [GraphQL backend](http://github.com/ehsieh/critistry_api) and [React front end](http://github.com/ehsieh/critistry-app)
