@@ -5,9 +5,6 @@ Critistry.com is a website for artists of all levels to connect and form online 
   * Elixir
   * Phoenix and Ecto
   * PostgreSQL
-  * GraphQL with Absinthe
-  * Apollo Client
-  * React  
 
 Site: [www.critistry.com](http://www.critistry.com)
 
